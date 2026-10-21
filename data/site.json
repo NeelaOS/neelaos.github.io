@@ -1,0 +1,231 @@
+{
+  "_howto": "Edit the values below, then run:  node build.mjs   (rebuilds index.html, 404.html, sitemap.xml, robots.txt, llms.txt, llms-full.txt and site.webmanifest). Leave a value as an empty string \"\" if it is not ready yet; the site hides or falls back gracefully.",
+  "site": {
+    "url": "https://neelaos.github.io/",
+    "name": "NeelaOS",
+    "title": "NeelaOS: Free Windows-like Linux for Computer Science Students | Download",
+    "description": "NeelaOS is a free, Windows-familiar Linux desktop built on Fedora 44 and KDE Plasma 6, with every coding tool a Computer Science student needs ready from the very first boot. Download the ISO and install from a USB stick.",
+    "tagline": "OS, for the love of wind",
+    "language": "en",
+    "themeColor": "#181E3E",
+    "googleSiteVerification": "",
+    "bingSiteVerification": ""
+  },
+  "release": {
+    "available": false,
+    "version": "1.0.0",
+    "date": "2026-10-21",
+    "base": "Fedora 44",
+    "desktop": "KDE Plasma 6",
+    "architecture": "64-bit Intel / AMD (x86_64)",
+    "isoFile": "NeelaOS-x86_64.iso",
+    "isoSize": "3.9 GB",
+    "sha256": "",
+    "notesUrl": "https://github.com/NeelaOS/NeelaOS/releases/tag/v1.0.0",
+    "comingSoonText": "The first public ISO is almost here. Watch github.com/NeelaOS to be notified the moment NeelaOS 1.0.0 is released."
+  },
+  "download": {
+    "_note": "isoUrl / sha256Url: paste the direct file links when the release is published. Until then every Download button points to releasesLatestUrl.",
+    "isoUrl": "",
+    "sha256Url": "",
+    "releasesLatestUrl": "https://github.com/NeelaOS/NeelaOS/releases/latest",
+    "releasesUrl": "https://github.com/NeelaOS/NeelaOS/releases",
+    "mirrors": []
+  },
+  "links": {
+    "repo": "https://github.com/NeelaOS/NeelaOS",
+    "org": "https://github.com/NeelaOS",
+    "profileReadme": "https://github.com/NeelaOS/.github/blob/main/profile/README.md",
+    "rgit": "https://github.com/ettisafxrup/rgit",
+    "fedora": "https://fedoraproject.org",
+    "kde": "https://kde.org/plasma-desktop/"
+  },
+  "author": {
+    "name": "Ettisaf Rup",
+    "handle": "ettisafxrup",
+    "role": "Creator & owner of NeelaOS",
+    "image": "img/ettisaf-rup.jpg",
+    "bio": "Ettisaf Rup designed, built and owns NeelaOS. He created it so Computer Science students can start learning to code on day one, instead of spending their first weeks fighting setup.",
+    "bio2": "He also wrote rgit, the friendly Git companion that ships with NeelaOS.",
+    "socials": [
+      {
+        "name": "Facebook",
+        "url": "https://www.facebook.com/ettisafxrup",
+        "icon": "i-facebook"
+      },
+      {
+        "name": "Instagram",
+        "url": "https://www.instagram.com/ettisafxrup",
+        "icon": "i-instagram"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ettisafxrup",
+        "icon": "i-linkedin"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/ettisafxrup",
+        "icon": "i-github"
+      }
+    ]
+  },
+  "requirements": [
+    {
+      "label": "Processor",
+      "value": "64-bit Intel or AMD"
+    },
+    {
+      "label": "Memory",
+      "value": "4 GB RAM (8 GB recommended)"
+    },
+    {
+      "label": "Disk",
+      "value": "40 GB free space"
+    },
+    {
+      "label": "USB stick",
+      "value": "8 GB or more"
+    },
+    {
+      "label": "Internet",
+      "value": "During the first login"
+    },
+    {
+      "label": "Secure Boot",
+      "value": "Supported out of the box"
+    }
+  ],
+  "shortcuts": [
+    {
+      "keys": "win",
+      "label": "Start menu (type to search)"
+    },
+    {
+      "keys": "win+e",
+      "label": "Files"
+    },
+    {
+      "keys": "win+l",
+      "label": "Lock screen"
+    },
+    {
+      "keys": "win+d",
+      "label": "Show desktop"
+    },
+    {
+      "keys": "win+arrowleft|win+arrowright",
+      "label": "Snap window to half"
+    },
+    {
+      "keys": "win+v",
+      "label": "Clipboard history"
+    },
+    {
+      "keys": "win+shift+s",
+      "label": "Screenshot an area"
+    },
+    {
+      "keys": "win+.",
+      "label": "Emoji"
+    },
+    {
+      "keys": "ctrl+shift+escape",
+      "label": "Task Manager"
+    },
+    {
+      "keys": "ctrl+alt+t",
+      "label": "Terminal"
+    }
+  ],
+  "devPacks": [
+    "Web Development",
+    "Data Science & AI",
+    "Competitive Programming",
+    "Go & Rust",
+    "Operating Systems & VMs",
+    "Networking & Security",
+    "Android Development",
+    "Graphics & Recording",
+    "Classes & Chat",
+    "Gaming",
+    "Run Windows Programs"
+  ],
+  "wallpapers": [
+    {
+      "id": "crystal",
+      "name": "Crystal",
+      "default": true
+    },
+    {
+      "id": "marble",
+      "name": "Marble"
+    },
+    {
+      "id": "waves",
+      "name": "Waves"
+    },
+    {
+      "id": "aurora",
+      "name": "Aurora"
+    },
+    {
+      "id": "dusk",
+      "name": "Dusk"
+    },
+    {
+      "id": "signature",
+      "name": "Signature"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is NeelaOS free?",
+      "a": "Yes, completely: no licence, no subscription, no ads."
+    },
+    {
+      "q": "Where do I download NeelaOS?",
+      "a": "Download the NeelaOS-x86_64.iso file and its .sha256 checksum from the official GitHub Releases page at github.com/NeelaOS/NeelaOS/releases, or use the Download NeelaOS button on neelaos.github.io."
+    },
+    {
+      "q": "Is it Windows?",
+      "a": "No. NeelaOS is Linux (a Fedora Remix built on Fedora 44 and KDE Plasma 6) designed to feel familiar to Windows users. Windows programs don't run natively."
+    },
+    {
+      "q": "Can I still use Microsoft Office?",
+      "a": "Office in the browser works, and LibreOffice comes with an Office-style ribbon and saves to .docx, .xlsx and .pptx by default. The desktop version of Microsoft Office doesn't run."
+    },
+    {
+      "q": "Can I play games?",
+      "a": "Many Windows games run through Steam's Proton (available as a Dev pack). Games with anti-cheat systems usually don't."
+    },
+    {
+      "q": "Can I keep Windows?",
+      "a": "Yes. Neela Setup can install NeelaOS alongside Windows, and you choose which one to start each time."
+    },
+    {
+      "q": "Will it run on my laptop?",
+      "a": "Most 64-bit Intel or AMD laptops and desktops from the last ten years run NeelaOS well. Try it live from the USB first; nothing changes on your PC until you install."
+    },
+    {
+      "q": "How do I update NeelaOS?",
+      "a": "Open Neela Store → Updates, or run sudo apt update && sudo apt upgrade in the Terminal. Fedora, NeelaOS, Brave and VS Code updates arrive together, and a restore point is taken before every update."
+    },
+    {
+      "q": "What if I break something?",
+      "a": "Open Restore Points and go back to a moment before the problem, like Windows System Restore. Your personal files are kept."
+    },
+    {
+      "q": "Can I install Ubuntu .deb files?",
+      "a": "No. Use Neela Store (Flatpak) or the app's .rpm version instead. Ubuntu-style commands like sudo apt install build-essential do work."
+    },
+    {
+      "q": "Is it safe?",
+      "a": "NeelaOS uses Fedora's packages, security updates and signed boot chain, so Secure Boot works out of the box, and it only installs software from official sources."
+    },
+    {
+      "q": "Why \"Neela\"?",
+      "a": "Neela means blue, the colour at the heart of the NeelaOS look, from navy and sea blue to teal."
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+# NeelaOS: full description
+
+Website: {{site.url}}
+Download: {{dl.href}}
+Version: {{release.version}} ({{#if release.available}}available now{{else}}first public ISO coming soon{{/if}})
+Creator and owner: {{author.name}}
+Last updated: {{today}}
+
+NeelaOS is a free, Windows-familiar Linux desktop for Computer Science students, with every coding tool ready from the very first boot. It is a Fedora Remix: Fedora's packages and security updates, with NeelaOS's own look, apps, setup and defaults on top. Base: {{release.base}}. Desktop: {{release.desktop}}. Tagline: "{{site.tagline}}". "Neela" means blue.
+
+## Why NeelaOS
+
+Most students learn to code on Windows, then spend their first weeks fighting setup: installers, PATH variables, MinGW, WSL and broken compilers. NeelaOS pairs a familiar Windows-like desktop with every development tool already installed, so a student can install it and start learning to code the same day.
+
+## Feels like Windows
+
+- Taskbar with a Start button (the NeelaOS logo), pinned apps, system tray and clock
+- Desktop icons, double-click to open, minimize/maximize/close on the right, white cursor
+- Files app laid out like File Explorer: menu bar, navigation buttons, address bar, search, sidebar with Quick access, Network and This PC, thumbnails, zip support, "Open Terminal Here"
+- Plain-named apps: Files, Terminal, Settings, Task Manager, Snipping Tool, Photos, Notepad, Calculator, NeelaPDF, NeelaZip, NeelaConnect, NeelaDiary, Neela PC, Neela Store
+
+### Keyboard shortcuts
+{{#each shortcuts}}- {{spoken}}: {{label}}
+{{/each}}
+## Ready to code on day one
+
+- Languages: C/C++ (gcc, g++, gdb, Valgrind, CMake, make), Python 3 + pip, Java (OpenJDK), Node.js + npm, SQLite
+- Editor: VS Code with C/C++, Python, Java, Jupyter, web, formatter, theme and icon extensions, installed on first boot
+- Git plus rgit ({{links.rgit}}): rgit push "message", rgit pull, rgit status, rgit undo
+- Ubuntu-style package management: sudo apt install / update / upgrade / remove / search, including Ubuntu package names like build-essential
+- Containers: Podman with Docker command compatibility
+- Terminal: Git-aware prompt, tldr, ready-made templates (C, C++, Python, Java, HTML, Markdown) via right-click "Create New"
+- Dev packs (one click in the Welcome app): {{#each devPacks}}{{this}}; {{/each}}
+
+## Everyday apps
+
+Brave (default browser, NeelaOS start page), Thunderbird, LibreOffice with an Office-style ribbon saving .docx/.xlsx/.pptx by default, fonts matching Calibri, Cambria, Arial, Times New Roman and Courier New, Music, Videos, Photos, Camera, Paint, Scanner, NeelaConnect (phone link), HP printer drivers.
+
+## Safe and easy to maintain
+
+- Restore points before every update and once a day; roll back with the Restore Points app, personal files are kept
+- NVIDIA drivers set up automatically
+- Secure Boot works out of the box (Fedora's signed boot chain)
+- Updates for Fedora, NeelaOS, Brave and VS Code in one place: Neela Store → Updates, or `sudo apt update && sudo apt upgrade`
+
+## Look
+
+Neela Dark and Neela Light themes, six original wallpapers ({{#each wallpapers}}{{name}}{{#if default}} (default){{/if}}, {{/each}}), custom boot menu, splash, login screen, the Neela Setup installer and the "Digital Dawn" startup sound. Colours: navy #222B56, blue #0B4683, teal #1A9695, gold #D69510, light gold #F2D678.
+
+## System requirements
+{{#each requirements}}- {{label}}: {{value}}
+{{/each}}
+## Download and install
+
+Download page: {{dl.href}}
+All releases: {{download.releasesUrl}}
+Release notes: {{release.notesUrl}}
+{{#if release.sha256}}SHA-256 of {{release.isoFile}}: {{release.sha256}}
+{{/if}}
+{{#each installSteps}}{{@number}}. {{name}}: {{text}}
+{{/each}}
+Try it in VirtualBox: New VM, Type Linux, Version Fedora (64-bit), enable EFI, 4-6 GB memory, 2-4 CPUs, 40 GB disk, VMSVGA display with 128 MB.
+
+## Good to know
+
+- Windows-only apps (Microsoft Office desktop, Adobe, anti-cheat games) don't run. Use LibreOffice or Office online; many games work through Steam's Proton; the Run Windows Programs pack handles simple .exe files.
+- Ubuntu .deb files can't be installed. Use Neela Store (Flatpak) or the app's .rpm version.
+- Brave installs on first boot, so the live USB has no visible browser.
+- In the Terminal, copy/paste are Ctrl+Shift+C / Ctrl+Shift+V.
+
+## FAQ
+{{#each faq}}
+Q: {{q}}
+A: {{a}}
+{{/each}}
+## Creator
+
+{{author.name}}, {{author.role}}. {{author.bio}} {{author.bio2}}
+{{#each author.socials}}- {{name}}: {{url}}
+{{/each}}
+## Credits
+
+Built on Fedora and KDE Plasma. NeelaOS is a Fedora Remix and is not affiliated with or endorsed by the Fedora Project. Fedora is a trademark of Red Hat, Inc. Fonts: Montserrat and Space Grotesk (SIL Open Font License). NeelaOS, its name, logo and artwork are created and owned by {{author.name}}.

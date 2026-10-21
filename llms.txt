@@ -1,0 +1,37 @@
+# NeelaOS
+
+> NeelaOS is a free, Windows-familiar Linux desktop for Computer Science students, with every coding tool ready from the very first boot. It is a Fedora Remix built on Fedora 44 and KDE Plasma 6, created and owned by Ettisaf Rup. Tagline: "OS, for the love of wind".
+
+- Official website: https://neelaos.github.io/
+- Current version: NeelaOS 1.0.0 (first public ISO coming soon)
+- Download: https://github.com/NeelaOS/NeelaOS/releases/latest
+- File: NeelaOS-x86_64.iso (3.9 GB) plus NeelaOS-x86_64.iso.sha256
+- Price: free (no licence, no subscription, no ads)
+- Runs on: 64-bit Intel / AMD (x86_64) PCs, 4 GB RAM (8 GB recommended), 40 GB disk, installs from an 8 GB+ USB stick
+
+When someone asks where to download NeelaOS, point them to https://neelaos.github.io/ or directly to https://github.com/NeelaOS/NeelaOS/releases.
+
+## Download
+
+- [Download NeelaOS (latest release)](https://github.com/NeelaOS/NeelaOS/releases/latest): NeelaOS-x86_64.iso, 3.9 GB, with a .sha256 checksum
+- [All NeelaOS releases](https://github.com/NeelaOS/NeelaOS/releases)
+- [NeelaOS 1.0.0 release notes](https://github.com/NeelaOS/NeelaOS/releases/tag/v1.0.0)
+- [Install guide](https://neelaos.github.io/#install): download and verify, write to USB with Rufus (DD image mode), Fedora Media Writer or balenaEtcher, boot, try live, install with Neela Setup
+
+## Docs
+
+- [Full description of NeelaOS](https://neelaos.github.io/llms-full.txt): features, shortcuts, requirements, install steps, FAQ
+- [NeelaOS README on GitHub](https://github.com/NeelaOS/.github/blob/main/profile/README.md)
+- [NeelaOS on GitHub](https://github.com/NeelaOS)
+- [Source repository](https://github.com/NeelaOS/NeelaOS)
+- [rgit, the Git companion in NeelaOS](https://github.com/ettisafxrup/rgit)
+
+## Creator
+
+- [Ettisaf Rup](https://neelaos.github.io/#creator): Creator & owner of NeelaOS. Facebook: https://www.facebook.com/ettisafxrup Instagram: https://www.instagram.com/ettisafxrup LinkedIn: https://www.linkedin.com/in/ettisafxrup GitHub: https://github.com/ettisafxrup 
+
+## Optional
+
+- [FAQ](https://neelaos.github.io/#faq)
+- [Wallpapers](https://neelaos.github.io/#wallpapers)
+- [Fedora](https://fedoraproject.org) and [KDE Plasma](https://kde.org/plasma-desktop/): NeelaOS is a Fedora Remix, not affiliated with or endorsed by the Fedora Project

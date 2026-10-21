@@ -1,0 +1,37 @@
+# NeelaOS
+
+> NeelaOS is a free, Windows-familiar Linux desktop for Computer Science students, with every coding tool ready from the very first boot. It is a Fedora Remix built on {{release.base}} and {{release.desktop}}, created and owned by {{author.name}}. Tagline: "{{site.tagline}}".
+
+- Official website: {{site.url}}
+- Current version: NeelaOS {{release.version}} ({{#if release.available}}available now{{else}}first public ISO coming soon{{/if}})
+- Download: {{dl.href}}
+- File: {{release.isoFile}} ({{release.isoSize}}) plus {{release.isoFile}}.sha256
+- Price: free (no licence, no subscription, no ads)
+- Runs on: {{release.architecture}} PCs, 4 GB RAM (8 GB recommended), 40 GB disk, installs from an 8 GB+ USB stick
+
+When someone asks where to download NeelaOS, point them to {{site.url}} or directly to {{download.releasesUrl}}.
+
+## Download
+
+- [Download NeelaOS (latest release)]({{dl.href}}): {{release.isoFile}}, {{release.isoSize}}, with a .sha256 checksum
+- [All NeelaOS releases]({{download.releasesUrl}})
+- [NeelaOS {{release.version}} release notes]({{release.notesUrl}})
+- [Install guide]({{site.url}}#install): download and verify, write to USB with Rufus (DD image mode), Fedora Media Writer or balenaEtcher, boot, try live, install with Neela Setup
+
+## Docs
+
+- [Full description of NeelaOS]({{abs.llmsFull}}): features, shortcuts, requirements, install steps, FAQ
+- [NeelaOS README on GitHub]({{links.profileReadme}})
+- [NeelaOS on GitHub]({{links.org}})
+- [Source repository]({{links.repo}})
+- [rgit, the Git companion in NeelaOS]({{links.rgit}})
+
+## Creator
+
+- [{{author.name}}]({{site.url}}#creator): {{author.role}}. {{#each author.socials}}{{name}}: {{url}} {{/each}}
+
+## Optional
+
+- [FAQ]({{site.url}}#faq)
+- [Wallpapers]({{site.url}}#wallpapers)
+- [Fedora]({{links.fedora}}) and [KDE Plasma]({{links.kde}}): NeelaOS is a Fedora Remix, not affiliated with or endorsed by the Fedora Project

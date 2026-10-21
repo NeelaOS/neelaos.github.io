@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="{{site.language}}" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{site.title}}</title>
+<meta name="description" content="{{site.description}}">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="{{author.name}}">
+<meta name="keywords" content="NeelaOS, NeelaOS download, NeelaOS ISO, Linux for students, Windows-like Linux, Linux for computer science students, Fedora Remix, KDE Plasma 6, Fedora 44, free operating system, Ettisaf Rup">
+<link rel="canonical" href="{{site.url}}">
+<meta name="theme-color" content="{{site.themeColor}}">
+<meta name="color-scheme" content="dark">
+{{#if site.googleSiteVerification}}<meta name="google-site-verification" content="{{site.googleSiteVerification}}">{{/if}}
+{{#if site.bingSiteVerification}}<meta name="msvalidate.01" content="{{site.bingSiteVerification}}">{{/if}}
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{site.name}}">
+<meta property="og:url" content="{{site.url}}">
+<meta property="og:title" content="{{site.title}}">
+<meta property="og:description" content="{{site.description}}">
+<meta property="og:image" content="{{abs.og}}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="NeelaOS: OS, for the love of wind. Free, built on Fedora, made for Computer Science students.">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{site.title}}">
+<meta name="twitter:description" content="{{site.description}}">
+<meta name="twitter:image" content="{{abs.og}}">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="alternate" type="text/plain" title="NeelaOS summary for AI assistants" href="llms.txt">
+<link rel="sitemap" type="application/xml" href="sitemap.xml">
+<link rel="preload" href="fonts/SpaceGrotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" type="image/avif" imagesrcset="img/wp-marble-768.avif 768w, img/wp-marble-1280.avif 1280w, img/wp-marble-1920.avif 1920w" imagesizes="100vw" fetchpriority="high">
+<style>{{{css}}}</style>
+<script>document.documentElement.className = "js";</script>
+<script src="js/main.js" defer></script>
+<script type="application/ld+json">{{{jsonld}}}</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-5-5m5 5 5-5M5 20h14"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+<symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+<symbol id="i-usb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="7" y="2" width="10" height="7" rx="1"/><path d="M5 9h14v8a5 5 0 0 1-5 5h-4a5 5 0 0 1-5-5z"/></symbol>
+<symbol id="i-help" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9.5"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4.2-6.5 8-6.5s7 2.5 8 6.5"/></symbol>
+<symbol id="i-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 16l5-5 4 4 3-3 6 6"/><circle cx="16" cy="9" r="1.6"/></symbol>
+<symbol id="i-chip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+<symbol id="i-bulb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M8 7h7"/></symbol>
+<symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></symbol>
+<symbol id="i-switch" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h14l-3-3M20 16H6l3 3"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.8c1.8.7 3 2.5 3.5 5.2"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-9.3-9.2C1.4 7.4 3.7 4 7.2 4c2 0 3.6 1.1 4.8 2.8C13.2 5.1 14.8 4 16.8 4c3.5 0 5.8 3.4 4.5 6.8C19.5 15.4 12 20 12 20z"/></symbol>
+<symbol id="i-window" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></symbol>
+<symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+<symbol id="i-palette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 1.8-.8 1.8-1.7 0-1.3-1.2-1.6-1.2-2.8 0-.9.8-1.5 1.7-1.5H17a4 4 0 0 0 4-4c0-4.4-4-8-9-8z"/><circle cx="7.5" cy="11" r="1.2"/><circle cx="10" cy="7" r="1.2"/><circle cx="15" cy="7.5" r="1.2"/></symbol>
+<symbol id="i-github" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></symbol>
+<symbol id="i-facebook" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.62 23.1 24 18.1 24 12.07Z"/></symbol>
+<symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+</defs>
+</svg>
+
+<div class="desktop-bg" aria-hidden="true"><picture class="desktop-bg__pic is-on" data-wp="marble"><source type="image/avif" srcset="img/wp-marble-768.avif 768w, img/wp-marble-1280.avif 1280w, img/wp-marble-1920.avif 1920w" sizes="100vw"><source type="image/webp" srcset="img/wp-marble-768.webp 768w, img/wp-marble-1280.webp 1280w, img/wp-marble-1920.webp 1920w" sizes="100vw"><img src="img/wp-marble-1280.webp" alt="" width="1920" height="1080" fetchpriority="high" decoding="async"></picture></div>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Desktop: floating glass bar. Mobile: slim top bar + OS-style bottom taskbar. -->
+<header class="topbar" data-topbar>
+  <nav class="topbar__in" aria-label="Main">
+    <a class="brand" href="#top" aria-label="NeelaOS home"><img src="img/favicon.svg" width="30" height="30" alt=""><span>Neela<span class="gold">OS</span></span></a>
+    <div class="links" data-links>
+      <a href="#features">Features</a>
+      <a href="#wallpapers">Wallpapers</a>
+      <a href="#install">Install</a>
+      <a href="#faq">FAQ</a>
+      <a href="#about">About</a>
+      <span class="links__pill" aria-hidden="true"></span>
+    </div>
+    <div class="topbar__end">
+      <a class="ver" href="{{release.notesUrl}}" target="_blank" rel="noopener" title="Release notes">v{{release.version}}</a>
+      <a class="icon-btn" href="{{links.org}}" target="_blank" rel="noopener" aria-label="NeelaOS on GitHub"><svg aria-hidden="true"><use href="#i-github"/></svg></a>
+      <a class="btn btn--primary btn--sm topbar__dl" href="{{dl.href}}"><span class="btn__spark" aria-hidden="true"></span>Download NeelaOS</a>
+    </div>
+    <span class="topbar__progress" aria-hidden="true"></span>
+  </nav>
+</header>
+
+<nav class="dock" aria-label="Quick navigation">
+  <button class="dock__start" type="button" aria-haspopup="dialog" aria-controls="startmenu" data-start><img src="img/favicon.svg" width="26" height="26" alt=""><span>Start</span></button>
+  <a class="dock__item" href="#top"><svg aria-hidden="true"><use href="#i-home"/></svg><span>Home</span></a>
+  <a class="dock__item" href="#features"><svg aria-hidden="true"><use href="#i-grid"/></svg><span>Features</span></a>
+  <a class="dock__item" href="#install"><svg aria-hidden="true"><use href="#i-usb"/></svg><span>Install</span></a>
+  <a class="dock__item" href="#faq"><svg aria-hidden="true"><use href="#i-help"/></svg><span>FAQ</span></a>
+</nav>
+
+<dialog class="startmenu" id="startmenu" aria-labelledby="sm-title">
+  <div class="startmenu__grab" data-grab><span></span></div>
+  <div class="startmenu__head">
+    <img src="img/favicon.svg" width="40" height="40" alt="">
+    <div><strong id="sm-title" tabindex="-1" autofocus>Neela<span class="gold">OS</span> {{release.version}}</strong><small>{{release.base}} &middot; {{release.desktop}}</small></div>
+    <button class="icon-btn" type="button" data-close aria-label="Close menu"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+  </div>
+  <p class="startmenu__label">Pinned</p>
+  <div class="startmenu__grid">
+    <a href="#top"><span class="tile"><svg aria-hidden="true"><use href="#i-home"/></svg></span>Home</a>
+    <a href="#why"><span class="tile"><svg aria-hidden="true"><use href="#i-bulb"/></svg></span>Why</a>
+    <a href="#features"><span class="tile"><svg aria-hidden="true"><use href="#i-grid"/></svg></span>Features</a>
+    <a href="#wallpapers"><span class="tile"><svg aria-hidden="true"><use href="#i-image"/></svg></span>Wallpapers</a>
+    <a href="#specs"><span class="tile"><svg aria-hidden="true"><use href="#i-chip"/></svg></span>Specs</a>
+    <a href="#install"><span class="tile"><svg aria-hidden="true"><use href="#i-usb"/></svg></span>Install</a>
+    <a href="#updates"><span class="tile"><svg aria-hidden="true"><use href="#i-refresh"/></svg></span>Updates</a>
+    <a href="#about"><span class="tile"><svg aria-hidden="true"><use href="#i-user"/></svg></span>About</a>
+    <a href="#faq"><span class="tile"><svg aria-hidden="true"><use href="#i-help"/></svg></span>FAQ</a>
+  </div>
+  <p class="startmenu__label">Follow {{author.name}}</p>
+  <div class="startmenu__social">
+    {{#each author.socials}}<a class="icon-btn" href="{{url}}" target="_blank" rel="noopener" aria-label="{{name}}"><svg aria-hidden="true"><use href="#{{icon}}"/></svg></a>{{/each}}
+    <a class="icon-btn" href="{{release.notesUrl}}" target="_blank" rel="noopener" aria-label="Release notes"><svg aria-hidden="true"><use href="#i-book"/></svg></a>
+  </div>
+  <a class="btn btn--primary btn--lg startmenu__dl" href="{{dl.href}}"><span class="btn__spark" aria-hidden="true"></span>Download NeelaOS</a>
+</dialog>
+
+<main id="main">
+
+<!-- ============================== HERO ============================== -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <canvas class="hero__sparks" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <svg class="mark" viewBox="196 188 362 377" role="img" aria-label="NeelaOS logo"><polygon points="204,203 307,203 468,357" style="--c:#FFFFFF;--i:0;--dx:-160px;--dy:-260px;--r:-60deg;--hx:-6px;--hy:-14px"/><polygon points="204,203 468,357 285,392" style="--c:#DCEFF5;--i:1;--dx:-240px;--dy:-120px;--r:40deg;--hx:-8px;--hy:-8px"/><polygon points="285,392 468,357 443,548" style="--c:#F2F9FC;--i:2;--dx:120px;--dy:240px;--r:-30deg;--hx:4px;--hy:10px"/><polygon points="468,357 550,548 443,548" style="--c:#BFDDE8;--i:3;--dx:260px;--dy:200px;--r:80deg;--hx:10px;--hy:10px"/><polygon points="285,392 360,466 360,507" style="--c:#A9CADB;--i:4;--dx:-200px;--dy:220px;--r:-90deg;--hx:-6px;--hy:10px"/><polygon points="285,392 360,507 284,557" style="--c:#D2E8F0;--i:5;--dx:-260px;--dy:160px;--r:50deg;--hx:-9px;--hy:12px"/><polygon points="392,284 392,236 468,195 468,357" style="--c:#9FC3D6;--i:6;--dx:160px;--dy:-260px;--r:70deg;--hx:6px;--hy:-12px"/><polygon points="468,195 550,272 468,357" style="--c:#EAF6FA;--i:7;--dx:280px;--dy:-180px;--r:-50deg;--hx:12px;--hy:-10px"/><polygon points="550,272 550,548 468,357" style="--c:#C7E2EC;--i:8;--dx:300px;--dy:40px;--r:100deg;--hx:14px;--hy:2px"/></svg>
+    <a class="release-pill hero-fade" style="--delay:.7s" href="{{release.notesUrl}}" target="_blank" rel="noopener"><b>NeelaOS v1.0.0</b>{{#if release.available}}Out now{{else}}Coming soon{{/if}}<span class="release-pill__more"> &middot; Release notes</span> <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <h1 id="hero-title"><span class="h1-kicker hero-fade" style="--delay:.8s">NeelaOS, the free Linux desktop for Computer Science students</span><span class="w"><span style="--i:0">Feels</span></span> <span class="w"><span style="--i:1">like</span></span> <span class="w"><span style="--i:2">Windows.</span></span><br><span class="w"><span style="--i:3">Runs</span></span> <span class="w"><span style="--i:4">like</span></span> <span class="w"><span style="--i:5" class="teal">Linux.</span></span></h1>
+    <p class="lead hero-fade" style="--delay:1.05s">A free, Windows-familiar Linux desktop for Computer Science students, with every coding tool ready from the very first boot. Built on {{release.base}} and {{release.desktop}}.</p>
+    <div class="hero__cta hero-fade" style="--delay:1.2s">
+      <a class="btn btn--primary btn--lg" href="{{dl.href}}"><span class="btn__spark" aria-hidden="true"></span>Download NeelaOS</a>
+      <a class="btn btn--ghost btn--lg" href="#features">See what's inside <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <p class="fineprint hero-fade" style="--delay:1.35s"><span>Free and open source</span><span>{{release.isoSize}} ISO</span><span>Installs from a USB stick in about 10 minutes</span></p>
+    <div class="shot-wrap">
+      <div class="shot" data-cursor="media" data-cursor-label="Desktop">
+        <picture><source type="image/avif" srcset="img/desktop-768.avif 768w, img/desktop-1280.avif 1280w, img/desktop-1920.avif 1920w" sizes="(min-width: 1264px) 1200px, 94vw"><source type="image/webp" srcset="img/desktop-768.webp 768w, img/desktop-1280.webp 1280w, img/desktop-1920.webp 1920w" sizes="(min-width: 1264px) 1200px, 94vw"><img src="img/desktop-1280.webp" alt="The NeelaOS desktop: the Welcome app open over the Neela Marble wallpaper, with a Windows-style taskbar and Start button at the bottom" width="1920" height="1080" loading="lazy" decoding="async"></picture>
+      </div>
+    </div>
+    <ul class="trust" data-stagger>
+      <li class="chip"><svg aria-hidden="true"><use href="#i-check"/></svg>Based on {{release.base}}</li>
+      <li class="chip"><svg aria-hidden="true"><use href="#i-check"/></svg>{{release.desktop}}</li>
+      <li class="chip"><svg aria-hidden="true"><use href="#i-check"/></svg>64-bit Intel / AMD</li>
+      <li class="chip"><svg aria-hidden="true"><use href="#i-check"/></svg>Built for CS undergrads</li>
+      <li class="chip"><svg aria-hidden="true"><use href="#i-check"/></svg>Secure Boot ready</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================== WHY ============================== -->
+<section class="section" id="why" aria-labelledby="why-title">
+  <div class="wrap">
+    <div class="motive">
+      <div class="motive__text" data-reveal>
+        <span class="eyebrow">Why NeelaOS?</span>
+        <h2 id="why-title">Most students learn to code on Windows, then spend their first weeks fighting setup.</h2>
+        <p>The course says &ldquo;install gcc&rdquo;, &ldquo;set up Python&rdquo;, &ldquo;use Git&rdquo;. On Windows that means installers, PATH variables, MinGW, WSL and tutorials written for a different version of everything. Linux solves most of this, but it can feel unfamiliar to someone who has only ever used Windows.</p>
+        <p><strong>NeelaOS closes that gap:</strong> a familiar Windows-like desktop paired with every development tool already installed.</p>
+        <blockquote class="quote">Install NeelaOS and <span class="gold">start learning to code the same day</span>, without fighting your computer first.</blockquote>
+      </div>
+      <div class="win" data-reveal style="--d:2">
+        <div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">first-semester-setup.txt</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="win__body compare">
+          <div class="panel">
+            <h3>On Windows <small>&middot; week one</small></h3>
+            <ul class="todo" data-io>
+              <li><span class="x" style="--d:0">Download the MinGW installer</span></li>
+              <li><span class="x" style="--d:1">Fix your PATH variables</span></li>
+              <li><span class="x" style="--d:2">Set up WSL</span></li>
+              <li><span class="x" style="--d:3">Debug a broken compiler</span></li>
+              <li><span class="x" style="--d:4">Find a tutorial for your version</span></li>
+              <li>&hellip;finally write &ldquo;Hello, world&rdquo;</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>On NeelaOS <small>&middot; day one</small></h3>
+            <ul class="done">
+              <li>gcc, g++, gdb &amp; make ready</li>
+              <li>Python, Java, Node.js ready</li>
+              <li>VS Code set up on first boot</li>
+              <li>Git + rgit ready</li>
+              <li>Ubuntu-style apt commands</li>
+              <li>Write &ldquo;Hello, world&rdquo;</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cards cards--4 pillars" data-stagger>
+      <article class="card"><span class="facet-ico"><svg aria-hidden="true"><use href="#i-window"/></svg></span><h3>Feels like Windows</h3><p>Start button, taskbar, desktop icons, Win key shortcuts and a Files app laid out like File Explorer.</p></article>
+      <article class="card"><span class="facet-ico"><svg aria-hidden="true"><use href="#i-code"/></svg></span><h3>Ready to code</h3><p>C/C++, Python, Java, Node.js, Git, VS Code, Podman and Ubuntu-style <code>sudo apt install</code>.</p></article>
+      <article class="card"><span class="facet-ico"><svg aria-hidden="true"><use href="#i-shield"/></svg></span><h3>Safe to experiment</h3><p>Automatic restore points before every update and once a day, like Windows System Restore.</p></article>
+      <article class="card"><span class="facet-ico"><svg aria-hidden="true"><use href="#i-palette"/></svg></span><h3>Made to look good</h3><p>Neela Dark and Light themes, six wallpapers, a custom boot splash, login screen and the <em>Digital Dawn</em> startup sound.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FEATURES ============================== -->
+<section class="section" id="features" aria-labelledby="features-title">
+  <div class="wrap">
+    <div class="head center" data-reveal><span class="eyebrow">What's inside</span><h2 id="features-title">Everything a CS student needs. <span class="teal">Nothing to set up.</span></h2><p>Each window below is a real part of NeelaOS. Go ahead and try them.</p></div>
+    <div class="bento">
+
+      <article class="win feat b-keys" data-reveal>
+        <div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Keyboard Shortcuts</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="win__body">
+          <h3>Feels like Windows, from the first click</h3>
+          <p>Taskbar with a Start button, pinned apps, system tray and clock. Desktop icons, double-click to open, minimize/maximize/close on the right, and the shortcuts you already know.</p>
+          <div class="demo"><div class="keys" data-keys>
+            {{#each shortcuts}}<button class="combo" type="button" aria-pressed="false" data-combo="{{keys}}" aria-label="{{spoken}}: {{label}}"><span class="caps">{{#each caps}}{{#if sep}}<span class="sep" aria-hidden="true">{{sep}}</span>{{/if}}<kbd class="cap" data-k="{{k}}">{{label}}</kbd>{{/each}}</span><span class="combo__label">{{label}}</span></button>{{/each}}
+          </div><p class="keys-hint" aria-live="polite">Click a shortcut to see it in action.</p></div>
+        </div>
+      </article>
+
+      <article class="win feat b-code" data-reveal>
+        <div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Developer Tools</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="win__body">
+          <h3>Ready to code on day one</h3>
+          <p>Compilers, languages and VS Code with C/C++, Python, Java, Jupyter and web extensions in NeelaOS colours. A Git-aware prompt, <code>tldr</code> and right-click &ldquo;Create New&rdquo; templates too.</p>
+          <div class="demo marquee" data-loop>
+            <div class="marquee__row"><div class="marquee__set"><span class="lang lang--hl">gcc / g++</span><span class="lang">gdb</span><span class="lang">Valgrind</span><span class="lang lang--hl">CMake</span><span class="lang">make</span><span class="lang">Python 3 + pip</span><span class="lang lang--hl">OpenJDK</span><span class="lang">Node.js + npm</span><span class="lang">SQLite</span></div><div class="marquee__set" aria-hidden="true"><span class="lang lang--hl">gcc / g++</span><span class="lang">gdb</span><span class="lang">Valgrind</span><span class="lang lang--hl">CMake</span><span class="lang">make</span><span class="lang">Python 3 + pip</span><span class="lang lang--hl">OpenJDK</span><span class="lang">Node.js + npm</span><span class="lang">SQLite</span></div></div>
+            <div class="marquee__row"><div class="marquee__set"><span class="lang lang--hl">VS Code</span><span class="lang">Git</span><span class="lang lang--hl">rgit</span><span class="lang">Podman</span><span class="lang">vim</span><span class="lang lang--hl">nano</span><span class="lang">htop</span><span class="lang">tldr</span><span class="lang lang--hl">Jupyter</span></div><div class="marquee__set" aria-hidden="true"><span class="lang lang--hl">VS Code</span><span class="lang">Git</span><span class="lang lang--hl">rgit</span><span class="lang">Podman</span><span class="lang">vim</span><span class="lang lang--hl">nano</span><span class="lang">htop</span><span class="lang">tldr</span><span class="lang lang--hl">Jupyter</span></div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="win feat b-files" data-reveal>
+        <div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Files</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="win__body">
+          <h3>Files, like File Explorer</h3>
+          <p>Address bar, Quick access, Network and This PC, thumbnails for videos, PDFs and documents, zip support, and &ldquo;Open Terminal Here&rdquo; on right-click.</p>
+          <div class="demo files" aria-hidden="true">
+            <div class="files__bar"><span class="files__nav"><i>&lsaquo;</i><i>&rsaquo;</i><i>&uarr;</i></span><span class="files__addr">This PC &rsaquo; Documents &rsaquo; CSE101</span></div>
+            <div class="files__main">
+              <ul class="files__side"><li class="is-on">Quick access</li><li>Desktop</li><li>Documents</li><li>Downloads</li><li>Network</li><li>This PC</li></ul>
+              <div class="files__grid"><span data-t="dir">labs</span><span data-t="c">lab1.c</span><span data-t="py">plot.py</span><span data-t="doc">report.docx</span><span data-t="pdf">slides.pdf</span><span data-t="zip">project.zip</span></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="win feat b-apt" data-reveal>
+        <div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Terminal &mdash; apt</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="win__body">
+          <h3>Speaks Ubuntu</h3>
+          <p>Most tutorials are written for Ubuntu. <code>sudo apt install</code>, <code>update</code>, <code>upgrade</code>, <code>remove</code> and <code>search</code> just work, even with Ubuntu package names.</p>
+          <div class="demo"><div class="term" data-term><div class="term__bar"><i></i><i></i><i></i><span>apt</span></div><div class="term__body"><p class="t-cmd" data-prompt="~ $">sudo apt install build-essential</p><p class="t-gold">&#8627; Ubuntu package name understood</p><p class="t-out">Installing compilers and build tools &hellip; done</p><p class="t-ok">&#10003; gcc, g++ and make are ready</p></div></div></div>
+        </div>
+      </article>
+
+      <article class="win feat b-git" data-reveal>
+        <div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Terminal &mdash; rgit</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="win__body">
+          <h3>Git without the headache</h3>
+          <p><a class="teal" href="{{links.rgit}}" target="_blank" rel="noopener">rgit</a> makes everyday Git one command: <code>rgit push</code>, <code>rgit pull</code>, <code>rgit status</code>, <code>rgit undo</code>.</p>
+          <div class="demo"><div class="term" data-term><div class="term__bar"><i></i><i></i><i></i><span>rgit</span></div><div class="term__body"><p class="t-cmd" data-prompt="~/cse101 $">rgit status</p><p class="t-out">2 files changed: lab1.c, notes.md</p><p class="t-cmd" data-prompt="~/cse101 $">rgit push "lab 1 done"</p><p class="t-ok">&#10003; Saved and uploaded</p><p class="t-cmd" data-prompt="~/cse101 $">rgit undo</p><p class="t-ok">&#10003; Took back your last save</p></div></div></div>
+        </div>
+      </article>
+
+      <article class="win feat b-packs" data-reveal>
+        <div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Welcome &mdash; Dev packs</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="win__body">
+          <h3>Dev packs: one click per course</h3>
+          <p>Open the Welcome app, tick what you need, click Install.</p>
+          <form class="demo" data-packs>
+            <div class="packs">{{#each devPacksList}}<label class="pack"><input type="checkbox" value="{{name}}"{{#if checked}} checked{{/if}}><span>{{name}}</span></label>{{/each}}</div>
+            <div class="packs-foot"><button class="btn btn--ghost btn--sm" type="submit">Install</button><div class="progress" aria-hidden="true"><i></i></div></div>
+            <p class="packs-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </article>
+
+      <article class="win feat b-undo" data-reveal>
+        <div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Restore Points</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="win__body">
+          <h3>Undo anything</h3>
+          <p>Restore points are taken before every update and once a day. Roll back without losing your personal files.</p>
+          <div class="demo restore" data-restore='[{"label":"Monday 18:42","ok":true,"text":"Back to Monday 18:42. Everything works, and your files were never touched."},{"label":"Yesterday 09:00","ok":true,"text":"Back to yesterday 09:00. Everything works, and your files were never touched."},{"label":"Today 09:00","ok":true,"text":"Back to today 09:00, before the update. Everything works again."},{"label":"Now","ok":false,"text":"Now: an experiment broke something. Drag back to a restore point."}]'>
+            <label class="sr-only" for="rp">Pick a restore point</label>
+            <input id="rp" type="range" min="0" max="3" step="1" value="3" data-cursor="drag">
+            <div class="restore__labels" aria-hidden="true"><span>Mon</span><span>Yesterday</span><span>Today</span><span>Now</span></div>
+            <p class="state">Now: an experiment broke something. Drag back to a restore point.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="win feat b-look" data-reveal>
+        <div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Settings &mdash; Appearance</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="win__body">
+          <h3>Made to look good</h3>
+          <p>Neela Dark and Neela Light, a NeelaOS boot menu, splash, login screen and installer, and the <em>Digital Dawn</em> startup sound. VS Code follows your theme.</p>
+          <div class="demo themes" aria-hidden="true">
+            <div class="theme theme--dark"><i></i><i></i><i></i><span>Neela Dark</span></div>
+            <div class="theme theme--light"><i></i><i></i><i></i><span>Neela Light</span></div>
+          </div>
+          <a class="link-arrow" href="#wallpapers">See the wallpapers <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+
+      <article class="win feat b-pc" data-reveal>
+        <div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Applications</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="win__body">
+          <h3>Your everyday PC, too</h3>
+          <p>Brave with a NeelaOS start page, LibreOffice with an Office-style ribbon that saves <code>.docx</code>, <code>.xlsx</code> and <code>.pptx</code>, plus fonts that match Calibri, Arial and Times New Roman.</p>
+          <div class="demo apps">
+            <div class="app"><i aria-hidden="true">Br</i>Brave</div><div class="app"><i aria-hidden="true">Lo</i>LibreOffice</div><div class="app"><i aria-hidden="true">Tb</i>Thunderbird</div><div class="app"><i aria-hidden="true">Ph</i>Photos</div>
+            <div class="app"><i aria-hidden="true">Mu</i>Music</div><div class="app"><i aria-hidden="true">Vi</i>Videos</div><div class="app"><i aria-hidden="true">Ca</i>Camera</div><div class="app"><i aria-hidden="true">Pa</i>Paint</div>
+            <div class="app"><i aria-hidden="true">PDF</i>NeelaPDF</div><div class="app"><i aria-hidden="true">Zip</i>NeelaZip</div><div class="app"><i aria-hidden="true">NC</i>NeelaConnect</div><div class="app"><i aria-hidden="true">St</i>Neela Store</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="win feat b-safe" data-reveal>
+        <div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">System &mdash; Security</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="win__body">
+          <h3>Safe and easy to maintain</h3>
+          <p>A Fedora Remix using Fedora's packages and security updates.</p>
+          <div class="demo safe-wrap">
+            <svg class="shield" viewBox="0 0 100 108" aria-hidden="true"><defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#46C1CF"/><stop offset=".55" stop-color="#155E9E"/><stop offset="1" stop-color="#222B56"/></linearGradient></defs><path d="M50 4 92 18v32c0 26-19 44-42 54C27 94 8 76 8 50V18Z" fill="url(#sg)"/><path d="M50 4v100M8 18l42 32 42-32" stroke="#fff" stroke-opacity=".14" stroke-width="1.5" fill="none"/><path d="M33 53l12 12 22-24" fill="none" stroke="#F2D678" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <ul class="checks">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Secure Boot via Fedora's signed boot chain</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>NVIDIA drivers set up automatically</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Fedora, NeelaOS, Brave and VS Code updates in one place</span></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================== WALLPAPERS ============================== -->
+<section class="section" id="wallpapers" aria-labelledby="wp-title">
+  <div class="wrap">
+    <div class="head center" data-reveal><span class="eyebrow">Wallpapers</span><h2 id="wp-title">Six original wallpapers. <span class="gold">Try them on this page.</span></h2><p>Pick one and it becomes this website's wallpaper, just like on your NeelaOS desktop. Crystal is the default.</p></div>
+    <div class="wp-layout">
+      <div class="win wp-preview" data-reveal>
+        <div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Settings &mdash; Wallpaper</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="win__body">
+          <div class="screen" data-cursor="media" data-cursor-label="Neela">
+            <picture data-wp-preview><source type="image/avif" srcset="img/wp-crystal-768.avif 768w, img/wp-crystal-1280.avif 1280w" sizes="(min-width: 1040px) 640px, 92vw"><img src="img/wp-crystal-768.webp" alt="Neela Crystal wallpaper on a NeelaOS desktop" width="1280" height="720" loading="lazy" decoding="async"></picture>
+            <div class="screen__taskbar" aria-hidden="true"><img src="img/favicon.svg" width="14" height="14" alt=""><i></i><i></i><i></i><span data-wp-name>Crystal</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="wp-side" data-reveal style="--d:1">
+        <fieldset class="wp-grid">
+          <legend class="sr-only">Choose a wallpaper for this page</legend>
+          {{#each wallpapers}}<label class="wp"><input type="radio" name="wallpaper" value="{{id}}"><picture><source type="image/avif" srcset="{{thumbAvif}}"><img src="{{thumb}}" alt="" width="480" height="270" loading="lazy" decoding="async"></picture><span>Neela {{name}}{{#if default}} <small>default</small>{{/if}}</span></label>{{/each}}
+        </fieldset>
+        <div class="palette" aria-label="NeelaOS colours">
+          <span style="--s:#222B56">navy <code>#222B56</code></span><span style="--s:#0B4683">blue <code>#0B4683</code></span><span style="--s:#1A9695">teal <code>#1A9695</code></span><span style="--s:#D69510">gold <code>#D69510</code></span><span style="--s:#F2D678">light gold <code>#F2D678</code></span>
+        </div>
+        <p class="muted small">Switch between Neela Dark and Neela Light in the Welcome app. <button class="text-btn" type="button" data-wp-reset>Reset this page's wallpaper</button></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== SPECS ============================== -->
+<section class="section section--tight" id="specs" aria-labelledby="specs-title">
+  <div class="wrap">
+    <div class="head center" data-reveal><span class="eyebrow">At a glance</span><h2 id="specs-title">The essentials, in one window.</h2></div>
+    <div class="win sysinfo" data-reveal>
+      <div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">About This System</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+      <div class="win__body">
+        <div class="sysinfo__brand">
+          <picture><source type="image/avif" srcset="img/wp-crystal-480.avif 480w, img/wp-crystal-768.avif 768w" sizes="300px"><img src="img/wp-crystal-480.webp" alt="" width="768" height="432" loading="lazy" decoding="async"></picture>
+          <img class="logo" src="logo/logo.svg" width="96" height="96" alt="">
+          <strong>Neela<span class="gold">OS</span> {{release.version}}</strong>
+          <span class="tagline small">{{site.tagline}}</span>
+        </div>
+        <dl>
+          <div><dt>Operating system</dt><dd>NeelaOS {{release.version}}</dd></div>
+          <div><dt>Based on</dt><dd>{{release.base}} (a Fedora Remix)</dd></div>
+          <div><dt>Desktop</dt><dd>{{release.desktop}}, Windows-familiar layout</dd></div>
+          <div><dt>Architecture</dt><dd>{{release.architecture}}</dd></div>
+          <div><dt>Download</dt><dd><code>{{release.isoFile}}</code> &middot; {{release.isoSize}}</dd></div>
+          <div><dt>Price</dt><dd>Free. No licence, no subscription, no ads</dd></div>
+          <div><dt>Updates</dt><dd>Neela Store &rarr; Updates, or <code>sudo apt update &amp;&amp; sudo apt upgrade</code></dd></div>
+          <div><dt>Created &amp; owned by</dt><dd><a class="teal" href="#creator">{{author.name}}</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== WHO ============================== -->
+<section class="section" id="who" aria-labelledby="who-title">
+  <div class="wrap">
+    <div class="head center" data-reveal><span class="eyebrow">Who it's for</span><h2 id="who-title">Made for people who&rsquo;d rather be building.</h2></div>
+    <div class="cards cards--4" data-stagger>
+      <article class="card"><span class="facet-ico"><svg aria-hidden="true"><use href="#i-cap"/></svg></span><h3>CS &amp; engineering students</h3><p>Who want a ready-to-code machine from the first boot.</p></article>
+      <article class="card"><span class="facet-ico"><svg aria-hidden="true"><use href="#i-switch"/></svg></span><h3>Beginners moving from Windows</h3><p>Who want Linux without the learning cliff.</p></article>
+      <article class="card"><span class="facet-ico"><svg aria-hidden="true"><use href="#i-users"/></svg></span><h3>Coding clubs, bootcamps &amp; labs</h3><p>That need one consistent setup for everyone.</p></article>
+      <article class="card"><span class="facet-ico"><svg aria-hidden="true"><use href="#i-heart"/></svg></span><h3>Anyone</h3><p>Who wants a clean, free, modern PC with no bloat.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== INSTALL ============================== -->
+<section class="section" id="install" aria-labelledby="install-title">
+  <div class="wrap">
+    <div class="head center" data-reveal><span class="eyebrow">Download &amp; install</span><h2 id="install-title">Download NeelaOS and install it in <span class="gold">5 steps</span>.</h2><p>Free, no account needed. Try it live from the USB first; nothing changes on your PC until you install.</p></div>
+    {{#unless release.available}}<p class="notice" data-reveal><span class="notice__dot" aria-hidden="true"></span><span>{{release.comingSoonText}} <a class="teal" href="{{links.org}}" target="_blank" rel="noopener">Watch on GitHub &rarr;</a></span></p>{{/unless}}
+    <div class="install">
+      <ol class="timeline" data-stagger>
+        <li class="tstep">
+          <h3>Download and verify</h3>
+          <p>Download <code>{{release.isoFile}}</code> ({{release.isoSize}}) and <code>{{release.isoFile}}.sha256</code>, then check the file is intact:</p>
+          <div class="codebox"><span class="codebox__tag">Windows</span><code>Get-FileHash {{release.isoFile}}</code><button class="copy-btn" type="button" data-copy="Get-FileHash {{release.isoFile}}"><svg aria-hidden="true"><use href="#i-copy"/></svg><span>Copy</span></button></div>
+          <div class="codebox"><span class="codebox__tag">Linux</span><code>sha256sum -c {{release.isoFile}}.sha256</code><button class="copy-btn" type="button" data-copy="sha256sum -c {{release.isoFile}}.sha256"><svg aria-hidden="true"><use href="#i-copy"/></svg><span>Copy</span></button></div>
+        </li>
+        <li class="tstep"><h3>Write it to a USB stick</h3><p>Use an 8 GB+ stick (it will be erased) with <strong>Rufus</strong> in <em>DD image mode</em>, <strong>Fedora Media Writer</strong> or <strong>balenaEtcher</strong>.</p></li>
+        <li class="tstep"><h3>Boot from the USB</h3><p>Restart, open the boot menu (usually <kbd>F12</kbd> <kbd>F11</kbd> <kbd>F9</kbd> <kbd>Esc</kbd> or <kbd>F2</kbd>), pick the USB stick and choose <strong>Start NeelaOS</strong>.</p></li>
+        <li class="tstep"><h3>Try it or install it</h3><p>NeelaOS runs live without changing anything. Click <strong>Install NeelaOS</strong> and Neela Setup asks for language, keyboard, disk and account. Use the whole disk or install alongside Windows, and keep the default <strong>Btrfs</strong> layout for restore points.</p></li>
+        <li class="tstep"><h3>Restart and log in</h3><p>Remove the USB stick and log in. Stay online for 10&ndash;20 minutes while the Welcome app sets up VS Code, Brave and media codecs.</p></li>
+      </ol>
+      <div class="install__side">
+        <div class="win" data-reveal>
+          <div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Download NeelaOS {{release.version}}</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+          <div class="win__body">
+            <a class="btn btn--primary btn--lg btn--block" href="{{dl.href}}"><span class="btn__spark" aria-hidden="true"></span>{{dl.label}}</a>
+            <dl class="links-list">
+              <div><dt>ISO image</dt><dd>{{#if dl.hasIso}}<a href="{{download.isoUrl}}">{{download.isoUrl}}</a>{{else}}<code>{{release.isoFile}}</code> &middot; {{release.isoSize}}, on the releases page{{/if}}</dd></div>
+              <div><dt>Checksum</dt><dd>{{#if dl.hasSha}}<a href="{{download.sha256Url}}">{{download.sha256Url}}</a>{{else}}<code>{{release.isoFile}}.sha256</code>{{/if}}</dd></div>
+              {{#if release.sha256}}<div><dt>SHA-256</dt><dd><code class="hash">{{release.sha256}}</code></dd></div>{{/if}}
+              <div><dt>All releases</dt><dd><a href="{{download.releasesUrl}}" target="_blank" rel="noopener">{{download.releasesUrl}}</a></dd></div>
+              <div><dt>Release notes</dt><dd><a href="{{release.notesUrl}}" target="_blank" rel="noopener">NeelaOS {{release.version}}</a></dd></div>
+              {{#each download.mirrors}}<div><dt>Mirror</dt><dd><a href="{{url}}">{{name}}</a></dd></div>{{/each}}
+            </dl>
+          </div>
+        </div>
+        <div class="win" data-reveal style="--d:1">
+          <div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">System requirements</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+          <div class="win__body">
+            <ul class="req">{{#each requirements}}<li><span>{{label}}</span><span>{{value}}</span></li>{{/each}}</ul>
+            <details class="tip">
+              <summary>Try it in VirtualBox first</summary>
+              <ul>
+                <li>New VM &rarr; Type <strong>Linux</strong>, Version <strong>Fedora (64-bit)</strong></li>
+                <li><strong>Enable EFI</strong>, 4&ndash;6 GB memory and 2&ndash;4 CPUs</li>
+                <li>A <strong>40 GB</strong> disk</li>
+                <li>Display &rarr; <strong>VMSVGA</strong>, 128 MB</li>
+                <li>Attach the ISO and start. After installing, remove the ISO and restart.</li>
+              </ul>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== UPDATES + GOOD TO KNOW ============================== -->
+<section class="section section--tight" id="updates" aria-labelledby="updates-title">
+  <div class="wrap">
+    <div class="head center" data-reveal><span class="eyebrow">After you install</span><h2 id="updates-title">Staying up to date, and good to know.</h2></div>
+    <div class="duo">
+      <div class="win" data-reveal>
+        <div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Neela Store &mdash; Updates</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="win__body">
+          <h3>One place for every update</h3>
+          <p class="muted">Fedora updates and NeelaOS improvements arrive together. Install them from <strong>Neela Store &rarr; Updates</strong>, or in the Terminal:</p>
+          <div class="codebox"><code>sudo apt update &amp;&amp; sudo apt upgrade</code><button class="copy-btn" type="button" data-copy="sudo apt update &amp;&amp; sudo apt upgrade"><svg aria-hidden="true"><use href="#i-copy"/></svg><span>Copy</span></button></div>
+          <p class="muted small" style="margin-top:12px">A restore point is created automatically before every update, so you can always roll back.</p>
+        </div>
+      </div>
+      <div class="win" data-reveal style="--d:1">
+        <div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Good to know</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="win__body">
+          <ul class="gtk">
+            <li><strong>Windows-only apps</strong> (Microsoft Office desktop, Adobe, anti-cheat games) don't run. Use LibreOffice or Office online; many games work through Steam's Proton, and the <em>Run Windows Programs</em> pack handles simple <code>.exe</code> files.</li>
+            <li><strong>Ubuntu <code>.deb</code> files</strong> can't be installed. Use Neela Store (Flatpak) or the app's <code>.rpm</code> version.</li>
+            <li><strong>Brave installs on first boot</strong>, so the live USB has no visible browser yet.</li>
+            <li>In the Terminal, copy and paste are <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> / <kbd>V</kbd>. <kbd>Ctrl</kbd>+<kbd>C</kbd> stops a running program.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== ABOUT ============================== -->
+<section class="section" id="about" aria-labelledby="about-title">
+  <div class="wrap">
+    <div class="head center" data-reveal><span class="eyebrow">About</span><h2 id="about-title">About Neela<span class="gold">OS</span> and its creator.</h2><p>An independent project, created and owned by {{author.name}}.</p></div>
+    <div class="about-grid">
+      <div class="win" data-reveal>
+        <div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">README.md</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="win__body prose">
+          <h3>Feels like Windows. Runs like Linux. Made for students.</h3>
+          <p>NeelaOS is a Fedora Remix: Fedora's packages and security updates, with NeelaOS's own look, apps, setup and defaults on top. Everything is free.</p>
+          <h3>Why &ldquo;Neela&rdquo;?</h3>
+          <p><em>Neela</em> means blue, the colour at the heart of the NeelaOS look, from navy and sea blue to teal.</p>
+          <h3>Free to use, owned by its creator</h3>
+          <p>NeelaOS is free to download and use: no licence, no subscription, no ads. The NeelaOS project, its name, logo, artwork and design system are created and strictly owned by <strong>{{author.name}}</strong>.</p>
+        </div>
+      </div>
+      <div class="win creator" id="creator" data-reveal style="--d:1">
+        <div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">About the creator</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="win__body">
+          <div class="avatar" data-cursor="media" data-cursor-label="Hi!">
+            <picture><source type="image/avif" srcset="img/ettisaf-rup-160.avif 160w, img/ettisaf-rup-320.avif 320w, img/ettisaf-rup-480.avif 480w" sizes="164px"><source type="image/webp" srcset="img/ettisaf-rup-160.webp 160w, img/ettisaf-rup-320.webp 320w, img/ettisaf-rup-480.webp 480w" sizes="164px"><img src="img/ettisaf-rup-320.webp" alt="Portrait of {{author.name}}, creator of NeelaOS" width="320" height="320" loading="lazy" decoding="async"></picture>
+          </div>
+          <div>
+            <h3>{{author.name}}</h3>
+            <p class="role">{{author.role}}</p>
+            <p>{{author.bio}}</p>
+            <p>He also wrote <a class="teal" href="{{links.rgit}}" target="_blank" rel="noopener">rgit</a>, the friendly Git companion that ships with NeelaOS.</p>
+            <div class="socials">{{#each author.socials}}<a class="social" href="{{url}}" target="_blank" rel="noopener me" aria-label="{{author.name}} on {{name}}"><svg aria-hidden="true"><use href="#{{icon}}"/></svg>{{name}}</a>{{/each}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FAQ ============================== -->
+<section class="section section--tight" id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="head center" data-reveal><span class="eyebrow">FAQ</span><h2 id="faq-title">Good questions, short answers.</h2></div>
+    <div class="faq" data-stagger>
+      {{#each faq}}<details{{#if @first}} open{{/if}}><summary>{{q}}</summary><div class="ans"><p>{{a}}</p></div></details>{{/each}}
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CTA ============================== -->
+<section class="section section--tight" aria-labelledby="cta-title">
+  <div class="wrap">
+    <div class="cta" data-reveal="scale" data-loop>
+      <picture><source type="image/avif" srcset="img/wp-aurora-768.avif 768w, img/wp-aurora-1280.avif 1280w, img/wp-aurora-1920.avif 1920w" sizes="(min-width: 1264px) 1200px, 100vw"><source type="image/webp" srcset="img/wp-aurora-768.webp 768w, img/wp-aurora-1280.webp 1280w, img/wp-aurora-1920.webp 1920w" sizes="(min-width: 1264px) 1200px, 100vw"><img src="img/wp-aurora-1280.webp" alt="" width="1920" height="1080" loading="lazy" decoding="async"></picture>
+      <span class="eyebrow">Free, for everyone</span>
+      <h2 id="cta-title">Stop fighting your computer. <span class="gold">Start building.</span></h2>
+      <p>A familiar desktop and a complete coding setup in about ten minutes. Free, for everyone.</p>
+      <a class="btn btn--primary btn--lg" href="{{dl.href}}"><span class="btn__spark" aria-hidden="true"></span>Download NeelaOS</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="logo/wordmark-white.svg" width="200" height="45" alt="NeelaOS" loading="lazy">
+        <p class="tagline">{{site.tagline}}.</p>
+        <p>A free, Windows-familiar Linux desktop for Computer Science students, with every coding tool ready from the very first boot.</p>
+      </div>
+      <div>
+        <h2 class="footer__h">Product</h2>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#wallpapers">Wallpapers</a></li>
+          <li><a href="#install">Install guide</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a class="gold-link" href="{{dl.href}}"><svg aria-hidden="true"><use href="#i-download"/></svg>Download NeelaOS</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer__h">Project</h2>
+        <ul>
+          <li><a href="#about">About NeelaOS</a></li>
+          <li><a href="#creator">The creator</a></li>
+          <li><a href="{{links.org}}" target="_blank" rel="noopener">NeelaOS on GitHub</a></li>
+          <li><a href="{{release.notesUrl}}" target="_blank" rel="noopener">Release notes</a></li>
+          <li><a href="{{links.rgit}}" target="_blank" rel="noopener">rgit</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer__h">Follow</h2>
+        <ul>{{#each author.socials}}<li><a href="{{url}}" target="_blank" rel="noopener me"><svg aria-hidden="true"><use href="#{{icon}}"/></svg>{{name}}</a></li>{{/each}}</ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p><strong>&copy; {{year}} {{author.name}}. NeelaOS, its name, logo and artwork are created and owned by {{author.name}}.</strong></p>
+      <p>Built on <a href="{{links.fedora}}" target="_blank" rel="noopener">Fedora</a> and <a href="{{links.kde}}" target="_blank" rel="noopener">KDE Plasma</a>. NeelaOS is a Fedora Remix and is not affiliated with or endorsed by the Fedora Project. Fedora is a trademark of Red Hat, Inc. All other trademarks belong to their owners. rgit by {{author.name}} (MIT License). Fonts: Montserrat and Space Grotesk (SIL Open Font License).</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

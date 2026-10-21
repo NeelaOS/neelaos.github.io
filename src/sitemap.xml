@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>{{site.url}}</loc>
+    <lastmod>{{today}}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image><image:loc>{{abs.og}}</image:loc><image:title>NeelaOS: OS, for the love of wind</image:title></image:image>
+    <image:image><image:loc>{{abs.desktop}}</image:loc><image:title>The NeelaOS desktop</image:title></image:image>
+    <image:image><image:loc>{{abs.author}}</image:loc><image:title>{{author.name}}, creator of NeelaOS</image:title></image:image>
+    {{#each abs.wallpapers}}<image:image><image:loc>{{url}}</image:loc><image:title>Neela {{name}} wallpaper</image:title></image:image>
+    {{/each}}
+  </url>
+  <url>
+    <loc>{{abs.llms}}</loc>
+    <lastmod>{{today}}</lastmod>
+    <priority>0.3</priority>
+  </url>
+</urlset>
