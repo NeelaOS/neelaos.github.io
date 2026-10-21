@@ -26,13 +26,9 @@ and commit the generated files. GitHub Pages serves them as they are.
 
 [`.github/workflows/sync-release.yml`](.github/workflows/sync-release.yml) runs every hour (or from **Actions → Sync latest NeelaOS release → Run workflow**). It calls [`scripts/sync-release.mjs`](scripts/sync-release.mjs), which reads the latest release of `links.repo` (NeelaOS/NeelaOS) through the GitHub API and updates `data/site.json`:
 
-- always: `version`, `date`, `notesUrl` (the release page)
-- when the release has an `.iso` file attached: `isoFile`, `isoSize`, `isoUrl`, and `available: true`
-- when it has a `.sha256` file: `sha256Url` and the checksum itself
+- `version`, `date`, `notesUrl` (the release page) and `available: true`, so the page shows **"NeelaOS x.y.z · Released"**. Attached files are not checked; the Download buttons always point to the latest release page.
 
 Then it rebuilds, commits and triggers a GitHub Pages build. Nothing is committed if the release didn't change.
-
-GitHub limits each release file to 2 GB. If the ISO is hosted somewhere else, put its link in `download.isoUrl` by hand and set `release.available` to `true`; the sync never overwrites those when the release has no `.iso`.
 
 **Instant updates (optional).** To refresh the site the moment a release is published, add a fine-grained token with *Contents: read & write* on `NeelaOS/neelaos.github.io` as the secret `WEBSITE_DISPATCH_TOKEN` in NeelaOS/NeelaOS, and add this workflow there:
 

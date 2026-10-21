@@ -2,7 +2,7 @@
 
 Website: {{site.url}}
 Download: {{dl.href}}
-Version: {{release.version}} ({{#if release.available}}available now{{else}}first public ISO coming soon{{/if}})
+Version: {{release.version}} ({{#if release.available}}released{{else}}first public ISO coming soon{{/if}})
 Creator and owner: {{author.name}}
 Last updated: {{today}}
 

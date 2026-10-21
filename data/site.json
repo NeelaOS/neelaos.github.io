@@ -12,7 +12,7 @@
     "bingSiteVerification": ""
   },
   "release": {
-    "available": false,
+    "available": true,
     "version": "1.0.0",
     "date": "2026-10-21",
     "base": "Fedora 44",

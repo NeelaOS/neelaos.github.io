@@ -3,7 +3,7 @@
 > NeelaOS is a free, Windows-familiar Linux desktop for Computer Science students, with every coding tool ready from the very first boot. It is a Fedora Remix built on {{release.base}} and {{release.desktop}}, created and owned by {{author.name}}. Tagline: "{{site.tagline}}".
 
 - Official website: {{site.url}}
-- Current version: NeelaOS {{release.version}} ({{#if release.available}}available now{{else}}first public ISO coming soon{{/if}})
+- Current version: NeelaOS {{release.version}} ({{#if release.available}}released{{else}}first public ISO coming soon{{/if}})
 - Download: {{dl.href}}
 - File: {{release.isoFile}} ({{release.isoSize}}) plus {{release.isoFile}}.sha256
 - Price: free (no licence, no subscription, no ads)

@@ -2,7 +2,7 @@
 
 Website: https://neelaos.github.io/
 Download: https://github.com/NeelaOS/NeelaOS/releases/latest
-Version: 1.0.0 (first public ISO coming soon)
+Version: 1.0.0 (released)
 Creator and owner: Ettisaf Rup
 Last updated: 2026-10-21
 
