@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NeelaOS · Feels like Windows. Runs like Linux.</title>
+<meta name="description" content="NeelaOS is a free, Windows-familiar Linux desktop built on Fedora that gives Computer Science students every coding tool they need, ready from the very first boot.">
+<meta name="author" content="Ettisaf Rup">
+<meta name="theme-color" content="#181E3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NeelaOS">
+<meta property="og:title" content="NeelaOS · Feels like Windows. Runs like Linux.">
+<meta property="og:description" content="NeelaOS is a free, Windows-familiar Linux desktop built on Fedora that gives Computer Science students every coding tool they need, ready from the very first boot.">
+<meta property="og:image" content="img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preload" href="fonts/SpaceGrotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.className = "js";</script>
+<script src="js/main.js" defer></script>
+<link rel="preload" as="image" type="image/avif" imagesrcset="img/marble-768.avif 768w, img/marble-1280.avif 1280w, img/marble-1920.avif 1920w" imagesizes="100vw">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "NeelaOS", "applicationCategory": "OperatingSystem", "operatingSystem": "Linux (Fedora Remix)", "description": "A free, Windows-familiar Linux desktop built on Fedora for Computer Science students.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "downloadUrl": "https://github.com/ettisafxrup/NeelaOS/releases/latest", "author": {"@type": "Person", "name": "Ettisaf Rup", "sameAs": ["https://www.facebook.com/ettisafxrup", "https://www.instagram.com/ettisafxrup", "https://www.linkedin.com/in/ettisafxrup", "https://github.com/ettisafxrup"]}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is NeelaOS free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, completely: no licence, no subscription, no ads."}}, {"@type": "Question", "name": "Is it Windows?", "acceptedAnswer": {"@type": "Answer", "text": "No. NeelaOS is Linux (based on Fedora) designed to feel familiar to Windows users. Windows programs don't run natively."}}, {"@type": "Question", "name": "Can I still use Microsoft Office?", "acceptedAnswer": {"@type": "Answer", "text": "Office in the browser works, and LibreOffice opens and saves Word, Excel and PowerPoint files with their layout intact. The desktop version of Microsoft Office doesn't run."}}, {"@type": "Question", "name": "Can I play games?", "acceptedAnswer": {"@type": "Answer", "text": "Many Windows games run through Steam's Proton (available as a Dev pack). Games with anti-cheat systems usually don't."}}, {"@type": "Question", "name": "Can I keep Windows?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Neela Setup can install NeelaOS alongside Windows, and you choose which one to start each time."}}, {"@type": "Question", "name": "Will it run on my laptop?", "acceptedAnswer": {"@type": "Answer", "text": "Most 64-bit laptops and desktops from the last ten years run NeelaOS well. Try it live from the USB first; nothing changes on your PC until you install."}}, {"@type": "Question", "name": "What if I break something?", "acceptedAnswer": {"@type": "Answer", "text": "Open Restore Points and go back to a moment before the problem. Your files are kept."}}, {"@type": "Question", "name": "Is it safe?", "acceptedAnswer": {"@type": "Answer", "text": "NeelaOS uses Fedora's packages, security updates and signed boot chain, and only installs software from official sources."}}, {"@type": "Question", "name": "Why \"Neela\"?", "acceptedAnswer": {"@type": "Answer", "text": "Neela means blue, the colour at the heart of the NeelaOS look, from navy and sea blue to teal."}}]}]</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-5-5m5 5 5-5M5 20h14"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+<symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+<symbol id="i-usb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="7" y="2" width="10" height="7" rx="1"/><path d="M5 9h14v8a5 5 0 0 1-5 5h-4a5 5 0 0 1-5-5z"/></symbol>
+<symbol id="i-help" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9.5"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4.2-6.5 8-6.5s7 2.5 8 6.5"/></symbol>
+<symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></symbol>
+<symbol id="i-switch" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h14l-3-3M20 16H6l3 3"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.8c1.8.7 3 2.5 3.5 5.2"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-9.3-9.2C1.4 7.4 3.7 4 7.2 4c2 0 3.6 1.1 4.8 2.8C13.2 5.1 14.8 4 16.8 4c3.5 0 5.8 3.4 4.5 6.8C19.5 15.4 12 20 12 20z"/></symbol>
+<symbol id="i-github" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></symbol>
+<symbol id="i-facebook" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.62 23.1 24 18.1 24 12.07Z"/></symbol>
+<symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+</defs>
+</svg>
+<div class="desktop-bg" aria-hidden="true"><picture><source type="image/avif" srcset="img/marble-768.avif 768w, img/marble-1280.avif 1280w, img/marble-1920.avif 1920w" sizes="100vw"><source type="image/webp" srcset="img/marble-768.webp 768w, img/marble-1280.webp 1280w, img/marble-1920.webp 1920w" sizes="100vw"><img src="img/marble-1280.webp" alt="" width="1920" height="1080" decoding="async" fetchpriority="high"></picture></div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="taskbar">
+  <nav class="wrap taskbar__in" aria-label="Main">
+    <a class="start" href="#top" aria-label="NeelaOS home"><img src="img/favicon.svg" width="30" height="30" alt=""><span>Neela<span class="gold">OS</span></span></a>
+    <ul class="tasks"><li><a href="#top">Home</a></li><li><a href="#features">Features</a></li><li><a href="#install">Install</a></li><li><a href="#faq">FAQ</a></li><li><a href="#about">About</a></li></ul>
+    <div class="tray">
+      <a class="tray__icon" href="https://github.com/ettisafxrup/NeelaOS" target="_blank" rel="noopener" aria-label="NeelaOS on GitHub"><svg aria-hidden="true"><use href="#i-github"/></svg></a>
+      <div class="clock" aria-hidden="true"><span></span><small></small></div>
+      <a class="btn btn--primary btn--sm" href="https://github.com/ettisafxrup/NeelaOS/releases/latest"><span class="btn__spark" aria-hidden="true"></span>Download NeelaOS</a>
+      <button class="tray__icon menu-btn" type="button" aria-expanded="false" aria-controls="startmenu" aria-label="Menu"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
+    </div>
+  </nav>
+</header>
+<div class="startmenu" id="startmenu">
+  <p class="startmenu__label">Pinned</p>
+  <div class="startmenu__grid"><a href="#top"><span class="tile"><svg aria-hidden="true"><use href="#i-home"/></svg></span>Home</a><a href="#features"><span class="tile"><svg aria-hidden="true"><use href="#i-grid"/></svg></span>Features</a><a href="#install"><span class="tile"><svg aria-hidden="true"><use href="#i-usb"/></svg></span>Install</a><a href="#faq"><span class="tile"><svg aria-hidden="true"><use href="#i-help"/></svg></span>FAQ</a><a href="#about"><span class="tile"><svg aria-hidden="true"><use href="#i-user"/></svg></span>About</a><a href="https://github.com/ettisafxrup/NeelaOS" target="_blank" rel="noopener"><span class="tile"><svg aria-hidden="true"><use href="#i-github"/></svg></span>GitHub</a></div>
+  <a class="btn btn--primary" href="https://github.com/ettisafxrup/NeelaOS/releases/latest"><span class="btn__spark" aria-hidden="true"></span>Download NeelaOS</a>
+</div>
+<main id="main">
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <canvas class="hero__sparks" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <svg class="mark" viewBox="196 188 362 377" role="img" aria-label="NeelaOS logo"><polygon points="204,203 307,203 468,357" style="--c:#FFFFFF;--i:0;--dx:-160px;--dy:-260px;--r:-60deg;--hx:-6px;--hy:-14px;--r2:0deg"/><polygon points="204,203 468,357 285,392" style="--c:#DCEFF5;--i:1;--dx:-240px;--dy:-120px;--r:40deg;--hx:-8px;--hy:-8px;--r2:0deg"/><polygon points="285,392 468,357 443,548" style="--c:#F2F9FC;--i:2;--dx:120px;--dy:240px;--r:-30deg;--hx:4px;--hy:10px;--r2:0deg"/><polygon points="468,357 550,548 443,548" style="--c:#BFDDE8;--i:3;--dx:260px;--dy:200px;--r:80deg;--hx:10px;--hy:10px;--r2:0deg"/><polygon points="285,392 360,466 360,507" style="--c:#A9CADB;--i:4;--dx:-200px;--dy:220px;--r:-90deg;--hx:-6px;--hy:10px;--r2:0deg"/><polygon points="285,392 360,507 284,557" style="--c:#D2E8F0;--i:5;--dx:-260px;--dy:160px;--r:50deg;--hx:-9px;--hy:12px;--r2:0deg"/><polygon points="392,284 392,236 468,195 468,357" style="--c:#9FC3D6;--i:6;--dx:160px;--dy:-260px;--r:70deg;--hx:6px;--hy:-12px;--r2:0deg"/><polygon points="468,195 550,272 468,357" style="--c:#EAF6FA;--i:7;--dx:280px;--dy:-180px;--r:-50deg;--hx:12px;--hy:-10px;--r2:0deg"/><polygon points="550,272 550,548 468,357" style="--c:#C7E2EC;--i:8;--dx:300px;--dy:40px;--r:100deg;--hx:14px;--hy:2px;--r2:0deg"/></svg>
+    <p class="tagline hero-fade" style="--delay:.8s">OS, for the love of wind.</p>
+    <h1 id="hero-title"><span class="w"><span style="--i:0">Feels</span></span> <span class="w"><span style="--i:1">like</span></span> <span class="w"><span style="--i:2">Windows.</span></span><br><span class="w"><span style="--i:3">Runs</span></span> <span class="w"><span style="--i:4">like</span></span> <span class="w"><span style="--i:5" class="teal">Linux.</span></span></h1>
+    <p class="lead hero-fade" style="--delay:1.05s">NeelaOS is a free operating system for students who are used to Windows. You get a familiar desktop, every coding tool your courses need, and none of the setup headaches.</p>
+    <div class="hero__cta hero-fade" style="--delay:1.2s">
+      <a class="btn btn--primary btn--lg" href="https://github.com/ettisafxrup/NeelaOS/releases/latest"><span class="btn__spark" aria-hidden="true"></span>Download NeelaOS</a>
+      <a class="btn btn--ghost btn--lg" href="#features">See what's inside <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <p class="fineprint hero-fade" style="--delay:1.35s"><span>Free and open source</span><span>Built on Fedora</span><span>Installs from a USB stick in about 10 minutes</span></p>
+    <div class="shot-wrap">
+      <div class="shot" data-cursor="media" data-cursor-label="Desktop">
+        <picture><source type="image/avif" srcset="img/desktop-768.avif 768w, img/desktop-1280.avif 1280w, img/desktop-1920.avif 1920w" sizes="(min-width: 1264px) 1200px, 94vw"><source type="image/webp" srcset="img/desktop-768.webp 768w, img/desktop-1280.webp 1280w, img/desktop-1920.webp 1920w" sizes="(min-width: 1264px) 1200px, 94vw"><img src="img/desktop-1280.webp" alt="The NeelaOS desktop with the Welcome app open, a taskbar at the bottom and the Neela marble wallpaper" width="1920" height="1080" loading="lazy" decoding="async"></picture>
+      </div>
+    </div>
+    <ul class="trust" role="list" data-stagger><li class="chip"><svg aria-hidden="true"><use href="#i-check"/></svg>Built on Fedora</li><li class="chip"><svg aria-hidden="true"><use href="#i-check"/></svg>KDE Plasma desktop</li><li class="chip"><svg aria-hidden="true"><use href="#i-check"/></svg>Free &amp; open source</li><li class="chip"><svg aria-hidden="true"><use href="#i-check"/></svg>Secure Boot ready</li><li class="chip"><svg aria-hidden="true"><use href="#i-check"/></svg>Installs in ~10 minutes</li></ul>
+  </div>
+</section>
+
+<section class="section" id="why" aria-labelledby="why-title">
+  <div class="wrap motive">
+    <div class="motive__text" data-reveal>
+      <span class="eyebrow">Why NeelaOS exists</span>
+      <h2 id="why-title" style="font-size:var(--fs-h2);margin-top:14px">Every CS student hits the same wall in their first semester.</h2>
+      <p>The course says &ldquo;install gcc&rdquo;, &ldquo;set up Python&rdquo;, &ldquo;use Git&rdquo;, &ldquo;run this in a terminal&rdquo;. On Windows, that means a long evening of installers, PATH variables, MinGW, WSL, broken compilers and tutorials written for a different version of everything. Some students decide programming &ldquo;isn&rsquo;t for them&rdquo; when the real problem was the setup.</p>
+      <p>Linux solves most of this, but for someone who has only ever used Windows it can feel unfamiliar and a little intimidating. <strong>NeelaOS closes that gap.</strong> It wraps the power of Linux in a desktop that already feels familiar, and it comes ready for coding.</p>
+      <blockquote class="quote">A student should be able to install NeelaOS and <span class="gold">start learning to code the same day</span>, without fighting their computer first.</blockquote>
+    </div>
+    <div class="win" data-reveal style="--d:2"><div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">first-semester-setup.txt</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+      <div class="win__body compare">
+        <div class="panel">
+          <h3>On Windows <small>&middot; week one</small></h3>
+          <ul class="todo" data-io>
+            <li><span class="x" style="--d:0">Download the MinGW installer</span></li>
+            <li><span class="x" style="--d:1">Fix your PATH variables</span></li>
+            <li><span class="x" style="--d:2">Set up WSL</span></li>
+            <li><span class="x" style="--d:3">Debug a broken compiler</span></li>
+            <li><span class="x" style="--d:4">Find a tutorial for your version</span></li>
+            <li>&hellip;finally write &ldquo;Hello, world&rdquo;</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>On NeelaOS <small>&middot; day one</small></h3>
+          <ul class="done">
+            <li>gcc, g++ &amp; clang ready</li>
+            <li>Python, Java, Node.js ready</li>
+            <li>VS Code set up on first boot</li>
+            <li>Git + rgit ready</li>
+            <li>Terminal one click away</li>
+            <li>Write &ldquo;Hello, world&rdquo;</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="features" aria-labelledby="features-title">
+  <div class="wrap">
+    <div class="head center" data-reveal><span class="eyebrow">What's inside</span><h2 id="features-title">Everything a CS student needs. <span class="teal">Nothing to set up.</span></h2><p>Each window below is a real part of NeelaOS. Go ahead and try them.</p></div>
+    <div class="bento">
+      <article class="win feat b-keys" data-reveal><div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Keyboard Shortcuts</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div><div class="win__body"><h3>Familiar from the first click</h3><p>A taskbar at the bottom, a Start button with the NeelaOS logo, desktop icons, double-click to open, and the shortcuts you already know. Apps have plain names: Files, Terminal, Settings, Task Manager, Notepad, Photos, Snipping Tool.</p><div class="demo"><div class="keys" data-keys><button class="combo" type="button" aria-pressed="false" data-combo="win"><span class="caps"><kbd class="cap" data-k="win">Win</kbd></span><span>Start</span></button><button class="combo" type="button" aria-pressed="false" data-combo="win+e"><span class="caps"><kbd class="cap" data-k="win">Win</kbd><span aria-hidden="true">+</span><kbd class="cap" data-k="e">E</kbd></span><span>Files</span></button><button class="combo" type="button" aria-pressed="false" data-combo="win+l"><span class="caps"><kbd class="cap" data-k="win">Win</kbd><span aria-hidden="true">+</span><kbd class="cap" data-k="l">L</kbd></span><span>Lock screen</span></button><button class="combo" type="button" aria-pressed="false" data-combo="win+v"><span class="caps"><kbd class="cap" data-k="win">Win</kbd><span aria-hidden="true">+</span><kbd class="cap" data-k="v">V</kbd></span><span>Clipboard history</span></button><button class="combo" type="button" aria-pressed="false" data-combo="win+shift+s"><span class="caps"><kbd class="cap" data-k="win">Win</kbd><span aria-hidden="true">+</span><kbd class="cap" data-k="shift">Shift</kbd><span aria-hidden="true">+</span><kbd class="cap" data-k="s">S</kbd></span><span>Screenshot</span></button><button class="combo" type="button" aria-pressed="false" data-combo="ctrl+shift+esc"><span class="caps"><kbd class="cap" data-k="ctrl">Ctrl</kbd><span aria-hidden="true">+</span><kbd class="cap" data-k="shift">Shift</kbd><span aria-hidden="true">+</span><kbd class="cap" data-k="esc">Esc</kbd></span><span>Task Manager</span></button></div><p class="keys-hint" aria-live="polite">Try it: press <b>Win + E</b> on your keyboard, or click a shortcut.</p></div></div></article>
+      <article class="win feat b-code" data-reveal><div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Developer Tools</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div><div class="win__body"><h3>Ready to code on day one</h3><p>C and C++ (gcc, g++, clang, gdb, Valgrind, CMake), Python with pip, Java, Node.js with npm, SQLite and Podman are already installed. VS Code arrives on first boot with curated extensions for C/C++, Python, Java, Jupyter and web development.</p><div class="demo marquee" data-loop><div class="marquee__row"><div class="marquee__set"><span class="lang lang--hl">gcc</span><span class="lang">g++</span><span class="lang">clang</span><span class="lang lang--hl">gdb</span><span class="lang">Valgrind</span><span class="lang">CMake</span><span class="lang lang--hl">Python</span><span class="lang">pip</span><span class="lang">Java</span></div><div class="marquee__set" aria-hidden="true"><span class="lang lang--hl">gcc</span><span class="lang">g++</span><span class="lang">clang</span><span class="lang lang--hl">gdb</span><span class="lang">Valgrind</span><span class="lang">CMake</span><span class="lang lang--hl">Python</span><span class="lang">pip</span><span class="lang">Java</span></div></div><div class="marquee__row"><div class="marquee__set"><span class="lang lang--hl">Node.js</span><span class="lang">npm</span><span class="lang">SQLite</span><span class="lang lang--hl">Podman</span><span class="lang">VS Code</span><span class="lang">Jupyter</span><span class="lang lang--hl">C/C++ ext</span><span class="lang">Git</span><span class="lang">rgit</span></div><div class="marquee__set" aria-hidden="true"><span class="lang lang--hl">Node.js</span><span class="lang">npm</span><span class="lang">SQLite</span><span class="lang lang--hl">Podman</span><span class="lang">VS Code</span><span class="lang">Jupyter</span><span class="lang lang--hl">C/C++ ext</span><span class="lang">Git</span><span class="lang">rgit</span></div></div></div></div></article>
+      <article class="win feat b-apt" data-reveal><div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Terminal &mdash; apt</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div><div class="win__body"><h3>Speaks Ubuntu</h3><p>Most Linux tutorials are written for Ubuntu. In NeelaOS, <code>apt install</code>, <code>update</code>, <code>upgrade</code>, <code>remove</code> and <code>search</code> just work. NeelaOS translates them and shows you the real command, so you learn as you go.</p><div class="demo"><div class="term" data-term><div class="term__bar"><i></i><i></i><i></i><span>apt</span></div><div class="term__body"><p class="t-cmd" data-prompt="~ $">sudo apt install gcc</p><p class="t-gold">&#8627; NeelaOS runs: sudo dnf install gcc</p><p class="t-out">Installing gcc &hellip; done</p><p class="t-ok">&#10003; gcc is ready to use</p></div></div></div></div></article>
+      <article class="win feat b-git" data-reveal><div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Terminal &mdash; rgit</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div><div class="win__body"><h3>Git without the headache</h3><p>NeelaOS ships with <a class="teal" href="https://github.com/ettisafxrup/rgit" target="_blank" rel="noopener">rgit</a>: <code>rgit push "message"</code> saves and uploads your work in one step, and <code>rgit undo</code> takes back your last save. The file manager shows which files changed, and right-click &rarr; <em>Open in VS Code</em> works in any folder.</p><div class="demo"><div class="term" data-term><div class="term__bar"><i></i><i></i><i></i><span>rgit</span></div><div class="term__body"><p class="t-cmd" data-prompt="~/lab1 $">rgit push "first lab done"</p><p class="t-ok">&#10003; Saved your changes</p><p class="t-ok">&#10003; Uploaded</p><p class="t-cmd" data-prompt="~/lab1 $">rgit undo</p><p class="t-ok">&#10003; Took back your last save</p></div></div></div></div></article>
+      <article class="win feat b-packs" data-reveal><div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Welcome &mdash; Dev packs</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div><div class="win__body"><h3>Dev packs: one click per course</h3><p>Open the Welcome app, tick what you need, click Install.</p><form class="demo" data-packs><div class="packs"><label class="pack"><input type="checkbox" value="Web Development" checked><span>Web Development</span></label><label class="pack"><input type="checkbox" value="Data Science & AI"><span>Data Science &amp; AI</span></label><label class="pack"><input type="checkbox" value="Competitive Programming" checked><span>Competitive Programming</span></label><label class="pack"><input type="checkbox" value="Go & Rust"><span>Go &amp; Rust</span></label><label class="pack"><input type="checkbox" value="Operating Systems & VMs"><span>Operating Systems &amp; VMs</span></label><label class="pack"><input type="checkbox" value="Networking & Security"><span>Networking &amp; Security</span></label><label class="pack"><input type="checkbox" value="Android Development"><span>Android Development</span></label><label class="pack"><input type="checkbox" value="Graphics & Recording"><span>Graphics &amp; Recording</span></label><label class="pack"><input type="checkbox" value="Classes & Chat"><span>Classes &amp; Chat</span></label><label class="pack"><input type="checkbox" value="Gaming"><span>Gaming</span></label><label class="pack"><input type="checkbox" value="Run Windows Programs"><span>Run Windows Programs</span></label></div><div class="packs-foot"><button class="btn btn--ghost btn--sm" type="submit">Install</button><div class="progress" aria-hidden="true"><i></i></div></div><p class="packs-status" aria-live="polite"></p></form></div></article>
+      <article class="win feat b-undo" data-reveal><div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Restore Points</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div><div class="win__body"><h3>Undo anything</h3><p>Restore points are taken automatically before every update and once a day. If something breaks, pick a moment from before the problem and go back. Your personal files stay untouched.</p><div class="demo restore" data-restore="[{&quot;label&quot;: &quot;Monday 18:42&quot;, &quot;ok&quot;: true, &quot;text&quot;: &quot;Back to Monday 18:42. Everything works, and your files were never touched.&quot;}, {&quot;label&quot;: &quot;Yesterday 09:00&quot;, &quot;ok&quot;: true, &quot;text&quot;: &quot;Back to yesterday 09:00. Everything works, and your files were never touched.&quot;}, {&quot;label&quot;: &quot;Today 09:00&quot;, &quot;ok&quot;: true, &quot;text&quot;: &quot;Back to today 09:00, before the update. Everything works again.&quot;}, {&quot;label&quot;: &quot;Now&quot;, &quot;ok&quot;: false, &quot;text&quot;: &quot;Now: an experiment broke something. Drag back to a restore point.&quot;}]"><label class="sr-only" for="rp">Pick a restore point</label><input id="rp" type="range" min="0" max="3" step="1" value="3"><div class="restore__labels" aria-hidden="true"><span>Mon</span><span>Yesterday</span><span>Today</span><span>Now</span></div><p class="state">Now: an experiment broke something. Drag back to a restore point.</p></div></div></article>
+      <article class="win feat b-look" data-reveal><div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Settings &mdash; Appearance</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div><div class="win__body"><h3>Beautiful by default</h3><p>A navy, teal and gold design system across boot, login, desktop, apps and terminal. Neela Dark and Neela Light, six original wallpapers, custom icons. VS Code follows your theme.</p><div class="demo"><div class="monitor" data-loop aria-hidden="true"><img src="img/marble-768.webp" width="768" height="432" alt="" loading="lazy" decoding="async"><img src="img/crystal-768.webp" width="768" height="432" alt="" loading="lazy" decoding="async"><img src="img/aurora-768.webp" width="768" height="432" alt="" loading="lazy" decoding="async"></div><div class="swatches" aria-hidden="true"><i style="background:#0D1230"></i><i style="background:#0B4683"></i><i style="background:#1A9695"></i><i style="background:#5FD3D1"></i><i style="background:#F2D678"></i></div></div></div></article>
+      <article class="win feat b-pc" data-reveal><div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Applications</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div><div class="win__body"><h3>Your everyday PC, too</h3><p>The Brave browser with a NeelaOS start page, Thunderbird for mail, LibreOffice with a familiar ribbon layout, music, videos, photos, a phone link (NeelaConnect), printing and more. Office documents keep their layout thanks to metric-compatible fonts.</p><div class="demo apps"><div class="app"><i aria-hidden="true">Br</i>Brave</div><div class="app"><i aria-hidden="true">Tb</i>Thunderbird</div><div class="app"><i aria-hidden="true">Lo</i>LibreOffice</div><div class="app"><i aria-hidden="true">Mu</i>Music</div><div class="app"><i aria-hidden="true">Vi</i>Videos</div><div class="app"><i aria-hidden="true">Ph</i>Photos</div><div class="app"><i aria-hidden="true">NC</i>NeelaConnect</div><div class="app"><i aria-hidden="true">Pr</i>Printing</div></div></div></article>
+      <article class="win feat b-safe" data-reveal><div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">System &mdash; Security</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div><div class="win__body"><h3>Safe, stable, up to date</h3><p>NeelaOS is built on Fedora, one of the most respected Linux distributions, and receives its security updates.</p><div class="demo safe-wrap"><svg class="shield" viewBox="0 0 100 108" aria-hidden="true"><defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#46C1CF"/><stop offset=".55" stop-color="#155E9E"/><stop offset="1" stop-color="#222B56"/></linearGradient></defs><path d="M50 4 92 18v32c0 26-19 44-42 54C27 94 8 76 8 50V18Z" fill="url(#sg)"/><path d="M50 4v100M8 18l42 32 42-32" stroke="#fff" stroke-opacity=".14" stroke-width="1.5" fill="none"/><path d="M33 53l12 12 22-24" fill="none" stroke="#F2D678" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="checks"><li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Built on <strong>Fedora</strong>, with its security updates</span></li><li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Secure Boot works out of the box</span></li><li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Graphics drivers, including NVIDIA, set up for you</span></li><li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Software only from official sources</span></li></ul></div></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" id="info" aria-labelledby="info-title">
+  <div class="wrap">
+    <div class="head center" data-reveal><span class="eyebrow">At a glance</span><h2 id="info-title">The essentials, in one window.</h2></div>
+    <div class="win sysinfo" data-reveal><div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">About This System</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+      <div class="win__body">
+        <div class="sysinfo__brand">
+          <picture><source type="image/avif" srcset="img/crystal-768.avif 768w, img/crystal-1280.avif 1280w" sizes="300px"><source type="image/webp" srcset="img/crystal-768.webp 768w, img/crystal-1280.webp 1280w" sizes="300px"><img src="img/crystal-1280.webp" alt="" width="1920" height="1080" loading="lazy" decoding="async"></picture>
+          <img class="logo" src="logo/logo.svg" width="96" height="96" alt="">
+          <strong>Neela<span class="gold">OS</span></strong>
+          <span class="tagline" style="font-size:1rem">OS, for the love of wind.</span>
+        </div>
+        <dl><div><dt>Operating system</dt><dd>NeelaOS</dd></div><div><dt>Based on</dt><dd>Fedora Linux (a Fedora Remix)</dd></div><div><dt>Desktop</dt><dd>KDE Plasma, with a Windows-familiar layout</dd></div><div><dt>Price</dt><dd>Free. No licence, no subscription, no ads</dd></div><div><dt>Install</dt><dd>From a USB stick in about 10 minutes</dd></div><div><dt>Needs</dt><dd>64-bit PC &middot; 4 GB RAM (8 GB recommended) &middot; 40 GB disk</dd></div><div><dt>Look</dt><dd>Neela Dark &amp; Neela Light &middot; six original wallpapers</dd></div><div><dt>Created &amp; owned by</dt><dd><a class="teal" href="#creator">Ettisaf Rup</a></dd></div><div><dt>Source &amp; releases</dt><dd><a class="teal" href="https://github.com/ettisafxrup/NeelaOS" target="_blank" rel="noopener">github.com/ettisafxrup/NeelaOS</a></dd></div></dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="who" aria-labelledby="who-title">
+  <div class="wrap">
+    <div class="head center" data-reveal><span class="eyebrow">Who it's for</span><h2 id="who-title">Made for people who'd rather be building.</h2></div>
+    <div class="cards cards--4" data-stagger><article class="card"><span class="facet-ico"><svg aria-hidden="true"><use href="#i-cap"/></svg></span><h3>Computer Science &amp; engineering students</h3><p>Who want a ready-to-code machine from the first boot.</p></article><article class="card"><span class="facet-ico"><svg aria-hidden="true"><use href="#i-switch"/></svg></span><h3>Beginners moving from Windows</h3><p>Who want Linux without the learning cliff.</p></article><article class="card"><span class="facet-ico"><svg aria-hidden="true"><use href="#i-users"/></svg></span><h3>Coding clubs, bootcamps &amp; labs</h3><p>That need one consistent setup for everyone.</p></article><article class="card"><span class="facet-ico"><svg aria-hidden="true"><use href="#i-heart"/></svg></span><h3>Anyone</h3><p>Who wants a clean, free, modern PC with no bloat.</p></article></div>
+  </div>
+</section>
+
+<section class="section" id="install" aria-labelledby="install-title">
+  <div class="wrap">
+    <div class="head center" data-reveal><span class="eyebrow">How to get it</span><h2 id="install-title">Your new PC, ready in <span class="gold">3 steps</span>.</h2><p>Free, no account needed. Try NeelaOS live from the USB first; nothing changes on your PC until you install.</p></div>
+    <div class="big-steps"><div class="steps-wrap" data-io><div class="steps__line" aria-hidden="true"></div><ol class="steps" data-stagger><li class="step"><h3>Download</h3><p>Download <code>NeelaOS-x86_64.iso</code> and its <code>.sha256</code> file from GitHub Releases, then check the download is intact:</p><div class="codebox"><code>Get-FileHash NeelaOS-x86_64.iso</code><button class="copy-btn" type="button" data-copy="Get-FileHash NeelaOS-x86_64.iso"><svg aria-hidden="true"><use href="#i-copy"/></svg><span>Copy</span></button></div><div class="codebox"><code>sha256sum -c NeelaOS-x86_64.iso.sha256</code><button class="copy-btn" type="button" data-copy="sha256sum -c NeelaOS-x86_64.iso.sha256"><svg aria-hidden="true"><use href="#i-copy"/></svg><span>Copy</span></button></div><p class="muted" style="font-size:.85rem">First line: Windows PowerShell. Second line: Linux.</p></li><li class="step"><h3>Write it to a USB stick</h3><p>Use a USB stick of 8 GB or more (it will be erased) with <strong>Rufus</strong> (choose <em>DD image mode</em> when asked), <strong>Fedora Media Writer</strong> or <strong>balenaEtcher</strong>.</p></li><li class="step"><h3>Boot and install</h3><p>Restart and open the boot menu (usually <kbd>F12</kbd>, <kbd>F11</kbd>, <kbd>F9</kbd>, <kbd>Esc</kbd> or <kbd>F2</kbd>), pick the USB stick and choose <strong>Start NeelaOS</strong>.</p><p>Try it live, then click <em>Install NeelaOS</em>. Neela Setup guides you through language, disk and account. You can keep Windows alongside it.</p></li></ol></div></div>
+    <div class="dl-grid" style="margin-top:28px">
+      <div class="win" data-reveal><div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Neela Setup &mdash; After installing</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="win__body prose" style="max-width:none">
+          <h3 style="font-size:1.35rem">After the first login</h3>
+          <p>Restart, remove the USB stick and log in. Stay online for a few minutes while the <strong>Welcome</strong> app finishes setting up VS Code, Brave, codecs and drivers.</p>
+          <p>Keep the default <strong>Btrfs</strong> layout to get restore points. Want a separate &ldquo;D: drive&rdquo; for your files? Choose custom partitioning and make a separate <code>/home</code> partition.</p>
+          <details class="tip">
+            <summary>Try it in VirtualBox first</summary>
+            <ul>
+              <li>New VM &rarr; Type <strong>Linux</strong>, Version <strong>Fedora (64-bit)</strong>. Not &ldquo;Other&rdquo;: that makes a 32-bit VM.</li>
+              <li>Enable <strong>EFI</strong>, 4&ndash;6 GB memory and 2&ndash;4 CPUs.</li>
+              <li>A <strong>40 GB</strong> disk (smaller disks fail the installer&rsquo;s space check).</li>
+              <li>Display &rarr; <strong>VMSVGA</strong>, 128 MB.</li>
+              <li>Attach the ISO and start. After installing, remove the ISO and restart.</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+      <div class="win" data-reveal style="--d:1"><div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">System requirements</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="win__body">
+          <ul class="req"><li><span>Processor</span><span>64-bit Intel or AMD</span></li><li><span>Memory</span><span>4 GB RAM (8 GB recommended)</span></li><li><span>Disk</span><span>40 GB free space</span></li><li><span>USB stick</span><span>8 GB or more</span></li><li><span>Internet</span><span>During the first login</span></li><li><span>Secure Boot</span><span>Works out of the box</span></li></ul>
+          <p class="note" style="margin-top:18px"><b>Nothing changes until you install.</b> Running NeelaOS live from the USB leaves your PC exactly as it is.</p>
+        </div>
+      </div>
+    </div>
+    <div class="steps-cta" data-reveal><a class="btn btn--primary btn--lg" href="https://github.com/ettisafxrup/NeelaOS/releases/latest"><span class="btn__spark" aria-hidden="true"></span>Download NeelaOS</a><a class="link-arrow" href="https://github.com/ettisafxrup/NeelaOS" target="_blank" rel="noopener">View on GitHub <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+  </div>
+</section>
+
+<section class="section" id="about" aria-labelledby="about-title">
+  <div class="wrap">
+    <div class="head center" data-reveal><span class="eyebrow">About</span><h2 id="about-title">About Neela<span class="gold">OS</span> and its creator.</h2><p>An independent project, created and owned by Ettisaf Rup.</p></div>
+    <div class="about-grid">
+      <div class="win" data-reveal><div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">README.md</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="win__body prose" style="max-width:none">
+          <h3>Feels like Windows. Runs like Linux. Made for students.</h3>
+          <p>Linux is what servers, cloud machines, coding contests and most of the software industry run on. NeelaOS wraps it in a desktop that already feels familiar, then adds every coding tool a course asks for.</p>
+          <h3>Why &ldquo;Neela&rdquo;?</h3>
+          <p><em>Neela</em> means blue, the colour at the heart of the NeelaOS look, from navy and sea blue to teal.</p>
+          <h3>Free to use, owned by its creator</h3>
+          <p>NeelaOS is free to download and use: no licence, no subscription, no ads. The NeelaOS project, its name, logo, artwork and design system are created and strictly owned by <strong>Ettisaf Rup</strong>.</p>
+        </div>
+      </div>
+      <div id="creator"><div class="win creator" data-reveal><div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">About the creator</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+      <div class="win__body">
+        <div class="avatar" aria-hidden="true">ER</div>
+        <div>
+          <h3 style="font-size:clamp(1.6rem,1.3rem + 1vw,2.1rem)">Ettisaf Rup</h3>
+          <p class="role">Creator &amp; owner of NeelaOS</p>
+          <p>NeelaOS is designed, built and owned by <strong>Ettisaf Rup</strong>. He created it to close the gap between Windows and Linux for Computer Science students, so that learning to code starts on day one instead of after a week of setup.</p>
+          <p>He also wrote <a class="teal" href="https://github.com/ettisafxrup/rgit" target="_blank" rel="noopener">rgit</a>, the friendly Git companion that ships with NeelaOS.</p>
+          <div class="socials"><a class="social" href="https://www.facebook.com/ettisafxrup" target="_blank" rel="noopener" aria-label="Ettisaf Rup on Facebook"><svg aria-hidden="true"><use href="#i-facebook"/></svg>Facebook <small>@ettisafxrup</small></a><a class="social" href="https://www.instagram.com/ettisafxrup" target="_blank" rel="noopener" aria-label="Ettisaf Rup on Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg>Instagram <small>@ettisafxrup</small></a><a class="social" href="https://www.linkedin.com/in/ettisafxrup" target="_blank" rel="noopener" aria-label="Ettisaf Rup on LinkedIn"><svg aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn <small>@ettisafxrup</small></a><a class="social" href="https://github.com/ettisafxrup" target="_blank" rel="noopener" aria-label="Ettisaf Rup on GitHub"><svg aria-hidden="true"><use href="#i-github"/></svg>GitHub <small>@ettisafxrup</small></a></div>
+        </div>
+      </div>
+    </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="head center" data-reveal><span class="eyebrow">FAQ</span><h2 id="faq-title">Good questions, short answers.</h2></div>
+    <div class="faq" data-stagger><details open><summary>Is NeelaOS free?</summary><div class="ans"><p>Yes, completely: no licence, no subscription, no ads.</p></div></details><details><summary>Is it Windows?</summary><div class="ans"><p>No. NeelaOS is Linux (based on Fedora) designed to feel familiar to Windows users. Windows programs don't run natively.</p></div></details><details><summary>Can I still use Microsoft Office?</summary><div class="ans"><p>Office in the browser works, and LibreOffice opens and saves Word, Excel and PowerPoint files with their layout intact. The desktop version of Microsoft Office doesn't run.</p></div></details><details><summary>Can I play games?</summary><div class="ans"><p>Many Windows games run through Steam's Proton (available as a Dev pack). Games with anti-cheat systems usually don't.</p></div></details><details><summary>Can I keep Windows?</summary><div class="ans"><p>Yes. Neela Setup can install NeelaOS alongside Windows, and you choose which one to start each time.</p></div></details><details><summary>Will it run on my laptop?</summary><div class="ans"><p>Most 64-bit laptops and desktops from the last ten years run NeelaOS well. Try it live from the USB first; nothing changes on your PC until you install.</p></div></details><details><summary>What if I break something?</summary><div class="ans"><p>Open Restore Points and go back to a moment before the problem. Your files are kept.</p></div></details><details><summary>Is it safe?</summary><div class="ans"><p>NeelaOS uses Fedora's packages, security updates and signed boot chain, and only installs software from official sources.</p></div></details><details><summary>Why “Neela”?</summary><div class="ans"><p><em>Neela</em> means blue, the colour at the heart of the NeelaOS look, from navy and sea blue to teal.</p></div></details></div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="cta-title">
+  <div class="wrap">
+    <div class="cta" data-reveal="scale" data-loop>
+      <picture><source type="image/avif" srcset="img/aurora-768.avif 768w, img/aurora-1280.avif 1280w, img/aurora-1920.avif 1920w" sizes="(min-width: 1264px) 1200px, 100vw"><source type="image/webp" srcset="img/aurora-768.webp 768w, img/aurora-1280.webp 1280w, img/aurora-1920.webp 1920w" sizes="(min-width: 1264px) 1200px, 100vw"><img src="img/aurora-1280.webp" alt="" width="1920" height="1080" loading="lazy" decoding="async"></picture>
+      <span class="eyebrow">Free, for everyone</span>
+      <h2 id="cta-title" style="margin-top:16px">Stop fighting your computer. <span class="gold">Start building.</span></h2>
+      <p>NeelaOS gives you a familiar desktop and a complete coding setup in about ten minutes. Free, for everyone.</p>
+      <a class="btn btn--primary btn--lg" href="https://github.com/ettisafxrup/NeelaOS/releases/latest"><span class="btn__spark" aria-hidden="true"></span>Download NeelaOS</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="logo/wordmark-white.svg" width="200" height="45" alt="NeelaOS" loading="lazy">
+        <p class="tagline">OS, for the love of wind.</p>
+        <p>A free, Windows-familiar Linux desktop built on Fedora, with every coding tool a Computer Science student needs, ready from the very first boot.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#install">Install guide</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a class="gold-link" href="https://github.com/ettisafxrup/NeelaOS/releases/latest"><svg aria-hidden="true"><use href="#i-download"/></svg>Download NeelaOS</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <ul>
+          <li><a href="#about">About NeelaOS</a></li>
+          <li><a href="#creator">The creator</a></li>
+          <li><a href="https://github.com/ettisafxrup/NeelaOS" target="_blank" rel="noopener">Source on GitHub</a></li>
+          <li><a href="https://github.com/ettisafxrup/rgit" target="_blank" rel="noopener">rgit</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul><li><a href="https://www.facebook.com/ettisafxrup" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-facebook"/></svg>Facebook</a></li><li><a href="https://www.instagram.com/ettisafxrup" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-instagram"/></svg>Instagram</a></li><li><a href="https://www.linkedin.com/in/ettisafxrup" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a></li><li><a href="https://github.com/ettisafxrup" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-github"/></svg>GitHub</a></li></ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p><strong>&copy; <span data-year>2026</span> Ettisaf Rup. NeelaOS, its name, logo and artwork are created and owned by Ettisaf Rup.</strong></p>
+      <p>NeelaOS is built on Fedora and KDE Plasma. NeelaOS is a Fedora Remix and is not affiliated with or endorsed by the Fedora Project. Fedora is a trademark of Red Hat, Inc. All other trademarks belong to their owners. rgit is created by Ettisaf Rup (MIT License).</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
