@@ -231,5 +231,27 @@
       "q": "Why \"Neela\"?",
       "a": "Neela means blue, the colour at the heart of the NeelaOS look, from navy and sea blue to teal."
     }
+  ],
+  "firstBoot": [
+    {
+      "cmd": "sudo apt update",
+      "out": "Checking for updates … done",
+      "desc": "Refreshes the list of available updates."
+    },
+    {
+      "cmd": "sudo apt upgrade",
+      "out": "Installing the latest updates … done",
+      "desc": "Installs the newest Fedora, app and security updates."
+    },
+    {
+      "cmd": "sudo apt upgrade neelaos",
+      "out": "NeelaOS is up to date",
+      "desc": "Makes sure the NeelaOS packages (apps, themes and settings) are the latest."
+    },
+    {
+      "cmd": "reboot",
+      "out": "Restarting into your updated NeelaOS …",
+      "desc": "Restarts the PC into the fully updated system."
+    }
   ]
 }

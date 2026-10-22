@@ -58,6 +58,8 @@
 <symbol id="i-bulb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></symbol>
 <symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></symbol>
 <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M8 7h7"/></symbol>
+<symbol id="i-power" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v8"/><path d="M6.3 6.3a8 8 0 1 0 11.4 0"/></symbol>
+<symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3l2.2 6.3L20.5 11.5l-6.3 2.2L12 20l-2.2-6.3L3.5 11.5l6.3-2.2z"/></symbol>
 <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></symbol>
 <symbol id="i-switch" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h14l-3-3M20 16H6l3 3"/></symbol>
 <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.8c1.8.7 3 2.5 3.5 5.2"/></symbol>
@@ -436,22 +438,9 @@
 <!-- ============================== INSTALL ============================== -->
 <section class="section" id="install" aria-labelledby="install-title">
   <div class="wrap">
-    <div class="head center" data-reveal><span class="eyebrow">Download &amp; install</span><h2 id="install-title">Download NeelaOS and install it in <span class="gold">5 steps</span>.</h2><p>Free, no account needed. Try it live from the USB first; nothing changes on your PC until you install.</p></div>
+    <div class="head center" data-reveal><span class="eyebrow">Download &amp; install</span><h2 id="install-title">Download NeelaOS and go from download to <span class="gold">ready</span>.</h2><p>Free, no account needed. Try it live from the USB first; nothing changes on your PC until you install.</p></div>
     {{#unless release.available}}<p class="notice" data-reveal><span class="notice__dot" aria-hidden="true"></span><span>{{release.comingSoonText}} <a class="teal" href="{{links.org}}" target="_blank" rel="noopener">Watch on GitHub &rarr;</a></span></p>{{/unless}}
-    <div class="install">
-      <ol class="timeline" data-stagger>
-        <li class="tstep">
-          <h3>Download and verify</h3>
-          <p>Download <code>{{release.isoFile}}</code> ({{release.isoSize}}) and <code>{{release.isoFile}}.sha256</code>, then check the file is intact:</p>
-          <div class="codebox"><span class="codebox__tag">Windows</span><code>Get-FileHash {{release.isoFile}}</code><button class="copy-btn" type="button" data-copy="Get-FileHash {{release.isoFile}}"><svg aria-hidden="true"><use href="#i-copy"/></svg><span>Copy</span></button></div>
-          <div class="codebox"><span class="codebox__tag">Linux</span><code>sha256sum -c {{release.isoFile}}.sha256</code><button class="copy-btn" type="button" data-copy="sha256sum -c {{release.isoFile}}.sha256"><svg aria-hidden="true"><use href="#i-copy"/></svg><span>Copy</span></button></div>
-        </li>
-        <li class="tstep"><h3>Write it to a USB stick</h3><p>Use an 8 GB+ stick (it will be erased) with <strong>Rufus</strong> in <em>DD image mode</em>, <strong>Fedora Media Writer</strong> or <strong>balenaEtcher</strong>.</p></li>
-        <li class="tstep"><h3>Boot from the USB</h3><p>Restart, open the boot menu (usually <kbd>F12</kbd> <kbd>F11</kbd> <kbd>F9</kbd> <kbd>Esc</kbd> or <kbd>F2</kbd>), pick the USB stick and choose <strong>Start NeelaOS</strong>.</p></li>
-        <li class="tstep"><h3>Try it or install it</h3><p>NeelaOS runs live without changing anything. Click <strong>Install NeelaOS</strong> and Neela Setup asks for language, keyboard, disk and account. Use the whole disk or install alongside Windows, and keep the default <strong>Btrfs</strong> layout for restore points.</p></li>
-        <li class="tstep"><h3>Restart and log in</h3><p>Remove the USB stick and log in. Stay online for 10&ndash;20 minutes while the Welcome app sets up VS Code, Brave and media codecs.</p></li>
-      </ol>
-      <div class="install__side">
+    <div class="install-get">
         <div class="win" data-reveal>
           <div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Download NeelaOS {{release.version}}</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
           <div class="win__body">
@@ -484,7 +473,97 @@
           </div>
         </div>
       </div>
+    <div class="journey-head" data-reveal><span class="eyebrow">The journey</span><h3>From download to your first line of code</h3></div>
+    <div class="journey" data-journey>
+      <div class="journey__track" aria-hidden="true"><span class="journey__fill"></span><span class="journey__runner"><i></i></span></div>
+      <ol class="journey__stops" data-loop>
+        <li class="jstop">
+          <span class="jstop__node" aria-hidden="true"><svg><use href="#i-download"/></svg></span>
+          <div class="jstop__card">
+            <div class="art art-download" aria-hidden="true"><i class="a-arrow"></i><i class="a-tray"></i></div>
+            <span class="jstop__n">Step 1</span>
+            <h3>Download</h3>
+            <p>Get <code>{{release.isoFile}}</code> ({{release.isoSize}}) and <code>{{release.isoFile}}.sha256</code> with the Download button above.</p>
+          </div>
+        </li>
+        <li class="jstop">
+          <span class="jstop__node" aria-hidden="true"><svg><use href="#i-shield"/></svg></span>
+          <div class="jstop__card">
+            <div class="art art-verify" aria-hidden="true"><svg><use href="#i-shield"/></svg></div>
+            <span class="jstop__n">Step 2</span>
+            <h3>Verify the download</h3>
+            <p>Make sure the file arrived intact by comparing it with the <code>.sha256</code> file:</p>
+            <div class="codebox"><span class="codebox__tag">Windows</span><code>Get-FileHash {{release.isoFile}}</code><button class="copy-btn" type="button" data-copy="Get-FileHash {{release.isoFile}}"><svg aria-hidden="true"><use href="#i-copy"/></svg><span>Copy</span></button></div>
+            <div class="codebox"><span class="codebox__tag">Linux</span><code>sha256sum -c {{release.isoFile}}.sha256</code><button class="copy-btn" type="button" data-copy="sha256sum -c {{release.isoFile}}.sha256"><svg aria-hidden="true"><use href="#i-copy"/></svg><span>Copy</span></button></div>
+          </div>
+        </li>
+        <li class="jstop">
+          <span class="jstop__node" aria-hidden="true"><svg><use href="#i-usb"/></svg></span>
+          <div class="jstop__card">
+            <div class="art art-usb" aria-hidden="true"><i class="a-port"></i><i class="a-stick"></i></div>
+            <span class="jstop__n">Step 3</span>
+            <h3>Write it to a USB stick</h3>
+            <p>Use an 8 GB+ stick (it will be erased) with <strong>Rufus</strong> in <em>DD image mode</em>, <strong>Fedora Media Writer</strong> or <strong>balenaEtcher</strong>.</p>
+          </div>
+        </li>
+        <li class="jstop">
+          <span class="jstop__node" aria-hidden="true"><svg><use href="#i-power"/></svg></span>
+          <div class="jstop__card">
+            <div class="art art-boot" aria-hidden="true"><i class="a-ring"></i><svg><use href="#i-power"/></svg></div>
+            <span class="jstop__n">Step 4</span>
+            <h3>Boot from the USB</h3>
+            <p>Restart, open the boot menu (usually <kbd>F12</kbd> <kbd>F11</kbd> <kbd>F9</kbd> <kbd>Esc</kbd> or <kbd>F2</kbd>), pick the USB stick and choose <strong>Start NeelaOS</strong>.</p>
+          </div>
+        </li>
+        <li class="jstop">
+          <span class="jstop__node" aria-hidden="true"><svg><use href="#i-window"/></svg></span>
+          <div class="jstop__card">
+            <div class="art art-install" aria-hidden="true"><i class="a-bar"><b></b></i></div>
+            <span class="jstop__n">Step 5</span>
+            <h3>Try it, then install</h3>
+            <p>NeelaOS runs live without changing anything. Click <strong>Install NeelaOS</strong> and Neela Setup asks for language, keyboard, disk and account. Install alongside Windows or use the whole disk, and keep the default <strong>Btrfs</strong> layout for restore points.</p>
+          </div>
+        </li>
+        <li class="jstop">
+          <span class="jstop__node" aria-hidden="true"><svg><use href="#i-refresh"/></svg></span>
+          <div class="jstop__card">
+            <div class="art art-term" aria-hidden="true"><i></i><i></i><i></i></div>
+            <span class="jstop__n">Step 6</span>
+            <h3>First boot: update</h3>
+            <p>Remove the USB stick, log in and stay online while the Welcome app sets up VS Code, Brave and codecs. Then run the <a class="teal" href="#first-boot">four update commands</a>.</p>
+          </div>
+        </li>
+        <li class="jstop jstop--end">
+          <span class="jstop__node" aria-hidden="true"><svg><use href="#i-sparkle"/></svg></span>
+          <div class="jstop__card">
+            <div class="art art-done" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <span class="jstop__n">Finish</span>
+            <h3>You&rsquo;re good to go</h3>
+            <p>Open VS Code, the Terminal or the Welcome app and start building. Restore points have your back.</p>
+          </div>
+        </li>
+      </ol>
     </div>
+  </div>
+</section>
+
+<!-- ============================== AFTER THE FIRST BOOT ============================== -->
+<section class="section section--tight" id="first-boot" aria-labelledby="fb-title">
+  <div class="wrap">
+    <div class="head center" data-reveal><span class="eyebrow">After the first boot</span><h2 id="fb-title">Four commands, then you&rsquo;re <span class="gold">good to go</span>.</h2><p>Once NeelaOS is installed and you&rsquo;ve logged in, connect to the internet, open Terminal (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>T</kbd>) and bring everything up to date.</p></div>
+    <div class="boot-grid">
+      <div class="win" data-reveal>
+        <div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Terminal &mdash; first boot</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="win__body">
+          <div class="term" data-term><div class="term__bar"><i></i><i></i><i></i><span>bash</span></div><div class="term__body">{{#each firstBoot}}<p class="t-cmd" data-prompt="~ $">{{cmd}}</p><p class="t-out">{{out}}</p>{{/each}}</div></div>
+          <div class="boot-copy"><button class="btn btn--ghost btn--sm copy-btn" type="button" data-copy="{{firstBootCopy}}"><svg aria-hidden="true"><use href="#i-copy"/></svg><span>Copy</span></button><span class="muted small">Copies all four commands. Paste in the Terminal with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd>.</span></div>
+        </div>
+      </div>
+      <ol class="boot-steps" data-stagger>
+        {{#each firstBoot}}<li><span class="boot-steps__n">{{@number}}</span><div><code>{{cmd}}</code><p>{{desc}}</p></div></li>{{/each}}
+      </ol>
+    </div>
+    <p class="ready" data-reveal><span class="ready__spark" aria-hidden="true"></span><span><strong>That&rsquo;s it, you&rsquo;re good to go!</strong> NeelaOS is fully up to date. Later updates arrive in Neela Store, and a restore point is taken before each one.</span></p>
   </div>
 </section>
 

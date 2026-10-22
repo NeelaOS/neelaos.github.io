@@ -76,6 +76,7 @@ SHA-256 of NeelaOS-x86_64.iso: d5674087d636865811cf6116dc8dec9bdd2eddb7dd6d6bc2c
 3. Boot from the USB: Restart, open the boot menu (usually F12, F11, F9, Esc or F2), select the USB stick and choose Start NeelaOS.
 4. Try it or install it: NeelaOS runs live from the USB without changing your PC. Click Install NeelaOS and Neela Setup asks for your language, keyboard, disk (whole disk, or alongside Windows) and account. Keep the default Btrfs layout to get restore points.
 5. Restart and log in: Remove the USB stick and log in. Stay online for 10 to 20 minutes while the Welcome app sets up VS Code, Brave and media codecs.
+6. Update after the first boot: Connect to the internet, open Terminal (Ctrl+Alt+T) and run: sudo apt update, then sudo apt upgrade, then sudo apt upgrade neelaos, then reboot. After the restart NeelaOS is fully up to date and ready to use.
 
 Try it in VirtualBox: New VM, Type Linux, Version Fedora (64-bit), enable EFI, 4-6 GB memory, 2-4 CPUs, 40 GB disk, VMSVGA display with 128 MB.
 
@@ -86,6 +87,24 @@ Try it in VirtualBox: New VM, Type Linux, Version Fedora (64-bit), enable EFI, 4
 - fixed bugs
 - added 24 in total dev packs, ready to install by one single click
 - fixed speed issue and optimizations.
+
+## After the first boot
+
+Connect to the internet, open Terminal (Ctrl+Alt+T) and run:
+
+```bash
+sudo apt update
+sudo apt upgrade
+sudo apt upgrade neelaos
+reboot
+```
+
+- `sudo apt update`: Refreshes the list of available updates.
+- `sudo apt upgrade`: Installs the newest Fedora, app and security updates.
+- `sudo apt upgrade neelaos`: Makes sure the NeelaOS packages (apps, themes and settings) are the latest.
+- `reboot`: Restarts the PC into the fully updated system.
+
+After the restart NeelaOS is fully up to date and you're good to go.
 
 ## Good to know
 

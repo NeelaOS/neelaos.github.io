@@ -65,7 +65,19 @@ Try it in VirtualBox: New VM, Type Linux, Version Fedora (64-bit), enable EFI, 4
 
 {{release.notes}}
 
-{{/if}}## Good to know
+{{/if}}## After the first boot
+
+Connect to the internet, open Terminal (Ctrl+Alt+T) and run:
+
+```bash
+{{firstBootCopy}}
+```
+
+{{#each firstBoot}}- `{{cmd}}`: {{desc}}
+{{/each}}
+After the restart NeelaOS is fully up to date and you're good to go.
+
+## Good to know
 
 - Windows-only apps (Microsoft Office desktop, Adobe, anti-cheat games) don't run. Use LibreOffice or Office online; many games work through Steam's Proton; the Run Windows Programs pack handles simple .exe files.
 - Ubuntu .deb files can't be installed. Use Neela Store (Flatpak) or the app's .rpm version.

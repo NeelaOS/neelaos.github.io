@@ -627,6 +627,115 @@ p kbd, li kbd { height: 22px; min-width: 0; padding: 0 6px; vertical-align: 1px;
 .notes__foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; margin-top: 18px; }
 .no-js .notes__foot .btn { display: none; }
 
+/* ---------- 15c. Get it (download + requirements) ---------------------- */
+.install-get { display: grid; gap: 24px; align-items: start; }
+.install-get > * { min-width: 0; }
+@media (min-width: 960px) { .install-get { grid-template-columns: 1.1fr 1fr; } }
+
+/* ---------- 15d. Installation journey ---------------------------------- */
+/* The fill and the travelling spark follow scroll via a CSS scroll timeline (runs on the
+   compositor); js/main.js only feeds --p where that isn't supported. Stop animations are
+   transform/opacity only and pause off-screen. */
+.journey-head { text-align: center; margin: clamp(56px, 8vw, 96px) auto 36px; }
+.journey-head h3 { font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.1rem); margin-top: 12px; }
+.journey { --x: 22px; position: relative; max-width: 1040px; margin: 0 auto; }
+@media (min-width: 900px) { .journey { --x: 50%; } }
+.journey__track { position: absolute; top: 28px; bottom: 28px; left: var(--x); width: 3px; margin-left: -1.5px; border-radius: 3px; background: rgb(159 195 214 / .14); }
+.journey__fill { position: absolute; inset: 0; border-radius: inherit; background: linear-gradient(var(--teal-300), var(--sea-500) 50%, var(--gold-300)); transform-origin: top; transform: scaleY(var(--p, 0)); box-shadow: 0 0 12px rgb(95 211 209 / .5); }
+.journey__runner { position: absolute; top: 0; left: 50%; width: 0; height: 100%; transform: translateY(calc(var(--p, 0) * 100%)); }
+.journey__runner i { position: absolute; left: -9px; top: -9px; width: 18px; height: 18px; border-radius: 50%; background: radial-gradient(circle, #FFF4C9 0 30%, var(--gold-300) 45%, rgb(214 149 16 / 0) 72%); box-shadow: 0 0 22px 6px rgb(242 214 120 / .45); }
+@supports (animation-timeline: view()) {
+  .journey { view-timeline: --journey block; }
+  .journey__fill { animation: j-fill linear both; animation-timeline: --journey; animation-range: cover 50vh cover calc(100% - 50vh); }
+  .journey__runner { animation: j-run linear both; animation-timeline: --journey; animation-range: cover 50vh cover calc(100% - 50vh); }
+  @keyframes j-fill { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+  @keyframes j-run { from { transform: translateY(0); } to { transform: translateY(100%); } }
+}
+.journey__stops { list-style: none; padding: 0; display: grid; gap: clamp(22px, 3vw, 34px); }
+.journey__stops > *, .jstop__card { min-width: 0; }
+.jstop { position: relative; padding-left: 58px; }
+.jstop__node {
+  position: absolute; z-index: 1; left: var(--x); top: 6px; width: 46px; height: 46px; margin-left: -23px;
+  display: grid; place-items: center; border-radius: 50%; color: var(--ice-400);
+  background: var(--navy-950); border: 2px solid var(--line-strong);
+  transition: color .4s, border-color .4s, background-color .4s, transform .5s var(--ease-spring), box-shadow .4s;
+}
+.jstop__node svg { width: 20px; height: 20px; }
+.jstop__card {
+  position: relative; padding: 22px 24px; border-radius: var(--r-md); background: var(--win); border: 1px solid var(--line);
+  box-shadow: var(--shadow-win); contain: layout paint;
+  opacity: .55; transform: translateX(14px); transition: opacity .6s var(--ease-out), transform .7s var(--ease-out), border-color .4s;
+}
+.jstop__n { font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--teal-300); }
+.jstop__card h3 { font-size: 1.2rem; margin-top: 4px; padding-right: 76px; }
+.jstop__card p { color: var(--ice-300); margin-top: 8px; font-size: .95rem; }
+.jstop.is-reached .jstop__node { color: var(--navy-950); background: var(--teal-300); border-color: var(--teal-300); transform: scale(1.06); box-shadow: 0 0 0 6px rgb(95 211 209 / .15); }
+.jstop--end.is-reached .jstop__node { background: var(--gold-300); border-color: var(--gold-300); box-shadow: 0 0 0 6px rgb(242 214 120 / .18), 0 0 26px rgb(242 214 120 / .5); }
+.jstop.is-reached .jstop__card { opacity: 1; transform: none; border-color: rgb(95 211 209 / .3); }
+@media (min-width: 900px) {
+  .jstop { width: 50%; padding-left: 0; padding-right: 52px; }
+  .jstop:nth-child(even) { margin-left: 50%; padding-right: 0; padding-left: 52px; }
+  .jstop__node { left: auto; right: -23px; margin-left: 0; }
+  .jstop:nth-child(even) .jstop__node { left: -23px; right: auto; }
+  .jstop:nth-child(odd) .jstop__card { transform: translateX(-14px); }
+  .jstop.is-reached .jstop__card { transform: none; }
+}
+/* stop illustrations */
+.art { position: absolute; top: 18px; right: 18px; width: 60px; height: 44px; border-radius: 10px; background: var(--card); border: 1px solid var(--line); overflow: hidden; }
+.art > * { position: absolute; }
+.art-download .a-arrow { left: 50%; top: 6px; width: 3px; height: 16px; margin-left: -1.5px; background: var(--teal-300); border-radius: 2px; }
+.art-download .a-arrow::after { content: ""; position: absolute; left: -4px; bottom: -3px; width: 8px; height: 8px; border: solid var(--teal-300); border-width: 0 3px 3px 0; transform: rotate(45deg); }
+.art-download .a-tray { left: 14px; right: 14px; bottom: 8px; height: 8px; border: 2.5px solid var(--gold-300); border-top: 0; border-radius: 0 0 4px 4px; }
+.art-verify svg { inset: 8px 0 0; margin: auto; width: 28px; height: 28px; color: var(--teal-300); }
+.art-usb .a-port { right: 8px; top: 14px; width: 14px; height: 16px; border: 2.5px solid var(--ice-400); border-radius: 3px; }
+.art-usb .a-stick { left: 8px; top: 16px; width: 24px; height: 12px; border-radius: 3px; background: var(--grad-brand); box-shadow: inset 0 0 0 1px rgb(95 211 209 / .5); }
+.art-usb .a-stick::after { content: ""; position: absolute; right: -8px; top: 2px; width: 8px; height: 8px; background: var(--ice-300); border-radius: 1px; }
+.art-boot svg { inset: 0; margin: auto; width: 22px; height: 22px; color: var(--gold-300); }
+.art-boot .a-ring { inset: 0; margin: auto; width: 32px; height: 32px; border-radius: 50%; border: 2px solid var(--gold-300); opacity: 0; }
+.art-install .a-bar { left: 10px; right: 10px; top: 19px; height: 6px; border-radius: 6px; background: var(--navy-950); overflow: hidden; }
+.art-install .a-bar b { position: absolute; inset: 0; background: linear-gradient(90deg, var(--teal-600), var(--teal-300)); transform-origin: left; transform: scaleX(.15); }
+.art-term { padding: 10px; display: grid; gap: 5px; align-content: center; }
+.art-term i { position: static; height: 4px; border-radius: 3px; background: var(--teal-300); transform-origin: left; transform: scaleX(.3); }
+.art-term i:nth-child(2) { background: var(--ice-400); }
+.art-term i:nth-child(3) { background: var(--gold-300); width: 50%; }
+.art-done i { left: 50%; top: 50%; width: 8px; height: 8px; margin: -4px; background: var(--gold-300); clip-path: polygon(0 0, 100% 45%, 30% 100%); transform: rotate(calc(var(--n) * 60deg)) translateX(2px) scale(.4); opacity: 0; }
+.art-done i:nth-child(1) { --n: 0; } .art-done i:nth-child(2) { --n: 1; background: var(--teal-300); } .art-done i:nth-child(3) { --n: 2; }
+.art-done i:nth-child(4) { --n: 3; background: var(--teal-300); } .art-done i:nth-child(5) { --n: 4; } .art-done i:nth-child(6) { --n: 5; background: var(--ice-200); }
+/* animate only once the stop is reached (and the whole journey pauses off-screen via .is-off) */
+.jstop.is-reached .art-download .a-arrow { animation: a-drop 1.6s var(--ease-in-out) infinite; }
+.jstop.is-reached .art-verify svg { animation: a-pop 2s var(--ease-spring) infinite; }
+.jstop.is-reached .art-usb .a-stick { animation: a-plug 2.4s var(--ease-in-out) infinite; }
+.jstop.is-reached .art-boot .a-ring { animation: a-ring 1.8s var(--ease-out) infinite; }
+.jstop.is-reached .art-install .a-bar b { animation: a-fill 2.6s var(--ease-in-out) infinite; }
+.jstop.is-reached .art-term i { animation: a-type 2.4s steps(6) infinite; }
+.jstop.is-reached .art-term i:nth-child(2) { animation-delay: .4s; }
+.jstop.is-reached .art-term i:nth-child(3) { animation-delay: .8s; }
+.jstop.is-reached .art-done i { animation: a-burst 1.8s var(--ease-out) infinite; }
+@keyframes a-drop { 0% { transform: translateY(-14px); opacity: 0; } 30% { opacity: 1; } 70%, 100% { transform: translateY(4px); opacity: 0; } }
+@keyframes a-pop { 0%, 100% { transform: scale(.88); } 40% { transform: scale(1.08); } }
+@keyframes a-plug { 0%, 15% { transform: translateX(0); } 45%, 75% { transform: translateX(10px); } 100% { transform: translateX(0); } }
+@keyframes a-ring { from { transform: scale(.7); opacity: .9; } to { transform: scale(1.35); opacity: 0; } }
+@keyframes a-fill { from { transform: scaleX(.05); } 80%, to { transform: scaleX(1); } }
+@keyframes a-type { from { transform: scaleX(.1); } to { transform: scaleX(1); } }
+@keyframes a-burst { from { transform: rotate(calc(var(--n) * 60deg)) translateX(2px) scale(.4); opacity: 1; } to { transform: rotate(calc(var(--n) * 60deg)) translateX(22px) scale(1); opacity: 0; } }
+
+/* ---------- 15e. After the first boot ---------------------------------- */
+.boot-grid { display: grid; gap: 24px; align-items: center; }
+.boot-grid > * { min-width: 0; }
+@media (min-width: 960px) { .boot-grid { grid-template-columns: 1.15fr 1fr; gap: 36px; } }
+.boot-grid .term__body { min-height: 220px; }
+.boot-copy { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 14px; }
+.boot-copy .copy-btn { padding: 9px 14px; }
+.boot-steps { list-style: none; padding: 0; display: grid; gap: 12px; }
+.boot-steps li { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start; padding: 16px 18px; border-radius: var(--r-md); background: rgb(22 28 58 / .92); border: 1px solid var(--line); }
+.boot-steps__n { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; font-weight: 700; font-size: .9rem; color: var(--navy-950); background: var(--teal-300); }
+.boot-steps li:last-child .boot-steps__n { background: var(--gold-300); }
+.boot-steps code { font-size: .9rem; }
+.boot-steps p { margin-top: 6px; font-size: .92rem; color: var(--ice-300); }
+.ready { display: flex; gap: 14px; align-items: center; max-width: 860px; margin: 32px auto 0; padding: 18px 22px; border-radius: var(--r-md); background: linear-gradient(90deg, rgb(242 214 120 / .12), rgb(95 211 209 / .08)); border: 1px solid rgb(242 214 120 / .35); color: var(--ice-100); }
+.ready strong { color: var(--gold-300); }
+.ready__spark { width: 34px; height: 34px; flex: none; background: var(--grad-gold); clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%); animation: a-pop 2.4s var(--ease-spring) infinite; }
+
 /* ---------- 16. Updates + good to know ---------------------------------- */
 .duo { display: grid; gap: 24px; align-items: start; }
 @media (min-width: 960px) { .duo { grid-template-columns: 1fr 1fr; } }
@@ -774,4 +883,7 @@ p kbd, li kbd { height: 22px; min-width: 0; padding: 0 6px; vertical-align: 1px;
   .marquee__set { flex-wrap: wrap; }
   .marquee__set[aria-hidden="true"] { display: none; }
   .topbar__progress { display: none; }
+  .journey__fill { transform: none !important; }
+  .journey__runner { display: none; }
+  .jstop__card { opacity: 1; transform: none !important; }
 }

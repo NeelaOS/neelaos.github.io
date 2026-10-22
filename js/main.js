@@ -63,7 +63,7 @@
   /* ---------- Scroll-spy: one observer drives the top links, dock and Start menu ---------- */
   function initScrollspy() {
     // Sections without their own nav entry light up the closest related one.
-    const GROUP = { top: "top", why: "top", features: "features", wallpapers: "wallpapers", specs: "features", who: "features", release: "install", install: "install", updates: "install", about: "about", faq: "faq" };
+    const GROUP = { top: "top", why: "top", features: "features", wallpapers: "wallpapers", specs: "features", who: "features", release: "install", install: "install", "first-boot": "install", updates: "install", about: "about", faq: "faq" };
     const DOCK_FALLBACK = { wallpapers: "features" };
     const topLinks = $$("[data-links] a");
     const dockLinks = $$(".dock__item");
@@ -557,6 +557,33 @@
     }));
   }
 
+  /* ---------- Installation journey: stops light up as the spark passes ---------- */
+  function initJourney() {
+    const journey = $("[data-journey]");
+    if (!journey) return;
+    const stops = $$(".jstop", journey);
+    if (reduceMotion || !("IntersectionObserver" in window)) { stops.forEach((s) => s.classList.add("is-reached")); return; }
+    // A stop counts as reached once its top passes the middle of the screen.
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) e.target.classList.toggle("is-reached", e.isIntersecting || e.boundingClientRect.top < 0);
+    }, { rootMargin: "0px 0px -50% 0px" });
+    stops.forEach((s) => io.observe(s));
+
+    // Browsers without CSS scroll timelines get the progress from a light rAF loop.
+    if (CSS.supports("animation-timeline: view()")) return;
+    const fill = $(".journey__fill", journey), runner = $(".journey__runner", journey);
+    let visible = false, ticking = false;
+    const update = () => {
+      ticking = false;
+      const r = journey.getBoundingClientRect();
+      const p = Math.min(1, Math.max(0, (innerHeight / 2 - r.top) / r.height)).toFixed(4);
+      fill.style.setProperty("--p", p);
+      runner.style.setProperty("--p", p);
+    };
+    new IntersectionObserver(([e]) => { visible = e.isIntersecting; if (visible) update(); }).observe(journey);
+    addEventListener("scroll", () => { if (visible && !ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  }
+
   /* ---------- Release notes: show the first part, expand on demand ---------- */
   function initNotes() {
     const notes = $("[data-notes]");
@@ -587,4 +614,5 @@
   initWallpapers();
   initCopy();
   initNotes();
+  initJourney();
 })();

@@ -12,6 +12,7 @@ Everything you'll want to change lives in **[`data/site.json`](data/site.json)**
 | `release.version`, `release.date`, `release.isoSize`, `release.sha256`, `release.notesUrl` | Version badge, specs, checksum shown on the page and in search/AI metadata |
 | `download.isoUrl`, `download.sha256Url` | Direct file links. While empty, every Download button points to `download.releasesLatestUrl` |
 | `download.mirrors` | Optional extra links, e.g. `[{ "name": "SourceForge", "url": "https://…" }]` |
+| `firstBoot` | The "After the first boot" commands (terminal demo, copy button, explanations) |
 | `author`, `links`, `requirements`, `shortcuts`, `devPacks`, `wallpapers`, `faq` | The matching sections of the page |
 
 Then rebuild (Node 18+, nothing to install):

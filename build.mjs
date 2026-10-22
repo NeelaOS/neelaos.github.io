@@ -196,6 +196,7 @@ const installSteps = [
   { name: "Boot from the USB", text: "Restart, open the boot menu (usually F12, F11, F9, Esc or F2), select the USB stick and choose Start NeelaOS." },
   { name: "Try it or install it", text: "NeelaOS runs live from the USB without changing your PC. Click Install NeelaOS and Neela Setup asks for your language, keyboard, disk (whole disk, or alongside Windows) and account. Keep the default Btrfs layout to get restore points." },
   { name: "Restart and log in", text: "Remove the USB stick and log in. Stay online for 10 to 20 minutes while the Welcome app sets up VS Code, Brave and media codecs." },
+  { name: "Update after the first boot", text: `Connect to the internet, open Terminal (Ctrl+Alt+T) and run: ${data.firstBoot.map((c) => c.cmd).join(", then ")}. After the restart NeelaOS is fully up to date and ready to use.` },
 ];
 
 const authorId = abs("#creator");
@@ -255,6 +256,7 @@ const graph = [
 
 const ctx = {
   ...data,
+  firstBootCopy: data.firstBoot.map((s) => s.cmd).join("\n"),
   notesHtml: release.notes ? markdown(release.notes) : "",
   shortcuts, wallpapers, installSteps,
   year: new Date().getFullYear(),
