@@ -61,7 +61,11 @@ Release notes: {{release.notesUrl}}
 {{/each}}
 Try it in VirtualBox: New VM, Type Linux, Version Fedora (64-bit), enable EFI, 4-6 GB memory, 2-4 CPUs, 40 GB disk, VMSVGA display with 128 MB.
 
-## Good to know
+{{#if release.notes}}## Release notes: {{release.name}}{{#if release.date}} (released {{release.date}}){{/if}}
+
+{{release.notes}}
+
+{{/if}}## Good to know
 
 - Windows-only apps (Microsoft Office desktop, Adobe, anti-cheat games) don't run. Use LibreOffice or Office online; many games work through Steam's Proton; the Run Windows Programs pack handles simple .exe files.
 - Ubuntu .deb files can't be installed. Use Neela Store (Flatpak) or the app's .rpm version.

@@ -27,6 +27,9 @@ and commit the generated files. GitHub Pages serves them as they are.
 [`.github/workflows/sync-release.yml`](.github/workflows/sync-release.yml) runs every hour (or from **Actions → Sync latest NeelaOS release → Run workflow**). It calls [`scripts/sync-release.mjs`](scripts/sync-release.mjs), which reads the latest release of `links.repo` (NeelaOS/NeelaOS) through the GitHub API and updates `data/site.json`:
 
 - `version`, `date`, `notesUrl` (the release page) and `available: true`, so the page shows **"NeelaOS x.y.z · Released"**. Attached files are not checked; the Download buttons always point to the latest release page.
+- the release **notes** (the release description on GitHub). They are rendered on the page in the **What's new** section, included in `llms-full.txt`, and if they list the ISO size (`| `NeelaOS-x86_64.iso` | 3.9 GB |`) or a SHA-256, those are used too.
+
+It then runs [`scripts/sync-mega.mjs`](scripts/sync-mega.mjs), which reads the public MEGA folder in `download.megaFolder` and fills in a direct link to the `.iso` inside it (so the Download buttons open the ISO itself), the `.sha256` link, the ISO size, and the SHA-256 read from the checksum file. Until an `.iso` is in the folder, the buttons open the folder.
 
 Then it rebuilds, commits and triggers a GitHub Pages build. Nothing is committed if the release didn't change.
 

@@ -63,7 +63,7 @@
   /* ---------- Scroll-spy: one observer drives the top links, dock and Start menu ---------- */
   function initScrollspy() {
     // Sections without their own nav entry light up the closest related one.
-    const GROUP = { top: "top", why: "top", features: "features", wallpapers: "wallpapers", specs: "features", who: "features", install: "install", updates: "install", about: "about", faq: "faq" };
+    const GROUP = { top: "top", why: "top", features: "features", wallpapers: "wallpapers", specs: "features", who: "features", release: "install", install: "install", updates: "install", about: "about", faq: "faq" };
     const DOCK_FALLBACK = { wallpapers: "features" };
     const topLinks = $$("[data-links] a");
     const dockLinks = $$(".dock__item");
@@ -557,6 +557,21 @@
     }));
   }
 
+  /* ---------- Release notes: show the first part, expand on demand ---------- */
+  function initNotes() {
+    const notes = $("[data-notes]");
+    const btn = $("[data-notes-toggle]");
+    if (!notes || !btn) return;
+    notes.classList.add("is-clamped");
+    if (notes.scrollHeight <= notes.clientHeight + 40) { notes.classList.remove("is-clamped"); btn.hidden = true; return; }
+    btn.addEventListener("click", () => {
+      const open = !notes.classList.toggle("is-clamped");
+      btn.setAttribute("aria-expanded", String(open));
+      btn.textContent = open ? "Show less" : "Read the full notes";
+      if (!open) notes.closest("section").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
+    });
+  }
+
   initTopbar();
   initPill();
   initScrollspy();
@@ -571,4 +586,5 @@
   initRestore();
   initWallpapers();
   initCopy();
+  initNotes();
 })();

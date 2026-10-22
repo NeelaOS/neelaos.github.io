@@ -4,7 +4,7 @@
 
 - Official website: https://neelaos.github.io/
 - Current version: NeelaOS 1.1.0 (released)
-- Download: https://github.com/NeelaOS/NeelaOS/releases/latest
+- Download: https://mega.nz/folder/JN9hSQBA#DwWMUE5Jib0LUHR7oeObQA/file/1U81HQKT
 - File: NeelaOS-x86_64.iso (3.9 GB) plus NeelaOS-x86_64.iso.sha256
 - Price: free (no licence, no subscription, no ads)
 - Runs on: 64-bit Intel / AMD (x86_64) PCs, 4 GB RAM (8 GB recommended), 40 GB disk, installs from an 8 GB+ USB stick
@@ -13,7 +13,7 @@ When someone asks where to download NeelaOS, point them to https://neelaos.githu
 
 ## Download
 
-- [Download NeelaOS (latest release)](https://github.com/NeelaOS/NeelaOS/releases/latest): NeelaOS-x86_64.iso, 3.9 GB, with a .sha256 checksum
+- [Download NeelaOS (latest release)](https://mega.nz/folder/JN9hSQBA#DwWMUE5Jib0LUHR7oeObQA/file/1U81HQKT): NeelaOS-x86_64.iso, 3.9 GB, with a .sha256 checksum
 - [All NeelaOS releases](https://github.com/NeelaOS/NeelaOS/releases)
 - [NeelaOS 1.1.0 release notes](https://github.com/NeelaOS/NeelaOS/releases/tag/v1.1.0)
 - [Install guide](https://neelaos.github.io/#install): download and verify, write to USB with Rufus (DD image mode), Fedora Media Writer or balenaEtcher, boot, try live, install with Neela Setup

@@ -1,7 +1,7 @@
 # NeelaOS: full description
 
 Website: https://neelaos.github.io/
-Download: https://github.com/NeelaOS/NeelaOS/releases/latest
+Download: https://mega.nz/folder/JN9hSQBA#DwWMUE5Jib0LUHR7oeObQA/file/1U81HQKT
 Version: 1.1.0 (released)
 Creator and owner: Ettisaf Rup
 Last updated: 2026-10-22
@@ -66,9 +66,10 @@ Neela Dark and Neela Light themes, six original wallpapers (Crystal (default), M
 
 ## Download and install
 
-Download page: https://github.com/NeelaOS/NeelaOS/releases/latest
+Download page: https://mega.nz/folder/JN9hSQBA#DwWMUE5Jib0LUHR7oeObQA/file/1U81HQKT
 All releases: https://github.com/NeelaOS/NeelaOS/releases
 Release notes: https://github.com/NeelaOS/NeelaOS/releases/tag/v1.1.0
+SHA-256 of NeelaOS-x86_64.iso: d5674087d636865811cf6116dc8dec9bdd2eddb7dd6d6bc2c1aed63957bf7653
 
 1. Download and verify: Download NeelaOS-x86_64.iso (3.9 GB) and NeelaOS-x86_64.iso.sha256 from GitHub Releases, then check it: on Windows run Get-FileHash NeelaOS-x86_64.iso in PowerShell and compare with the .sha256 file; on Linux run sha256sum -c NeelaOS-x86_64.iso.sha256.
 2. Write it to a USB stick: Use a USB stick of 8 GB or more with Rufus (choose DD image mode), Fedora Media Writer or balenaEtcher. The stick will be erased.
@@ -77,6 +78,14 @@ Release notes: https://github.com/NeelaOS/NeelaOS/releases/tag/v1.1.0
 5. Restart and log in: Remove the USB stick and log in. Stay online for 10 to 20 minutes while the Welcome app sets up VS Code, Brave and media codecs.
 
 Try it in VirtualBox: New VM, Type Linux, Version Fedora (64-bit), enable EFI, 4-6 GB memory, 2-4 CPUs, 40 GB disk, VMSVGA display with 128 MB.
+
+## Release notes: NeelaOS v1.1.0 (released 2026-10-22)
+
+# Release Notes
+
+- fixed bugs
+- added 24 in total dev packs, ready to install by one single click
+- fixed speed issue and optimizations.
 
 ## Good to know
 

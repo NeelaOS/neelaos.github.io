@@ -30,6 +30,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/sync-release.mjs
 
+      - name: Pull ISO link, size and checksum from MEGA
+        run: node scripts/sync-mega.mjs
+
       - name: Rebuild site
         run: node build.mjs
 

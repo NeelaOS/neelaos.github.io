@@ -103,6 +103,65 @@ const abs = (p) => new URL(p, data.site.url).href;
 const jsonLd = (obj) => JSON.stringify(obj).replace(/</g, "\\u003c");
 const strip = (s) => s.replace(/<[^>]+>/g, "");
 
+/* Release notes come from GitHub as Markdown. This renders the subset release notes use
+   (headings, lists, tables, code, bold/italic, links). Input is escaped first, so raw HTML
+   in the notes can never reach the page. */
+function inline(text) {
+  const codes = [];
+  let t = esc(text).replace(/`([^`]+)`/g, (_, c) => `\u0000${codes.push(c) - 1}\u0000`);
+  t = t.replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+    .replace(/(^|[^*\w])\*([^*\n]+)\*(?!\w)/g, "$1<em>$2</em>")
+    .replace(/(^|\W)_([^_\n]+)_(?!\w)/g, "$1<em>$2</em>");
+  return t.replace(/\u0000(\d+)\u0000/g, (_, i) => `<code>${codes[i]}</code>`);
+}
+function markdown(md) {
+  const lines = md.replace(/\r\n/g, "\n").split("\n");
+  const out = [];
+  let i = /^#\s/.test(lines[0] || "") ? 1 : 0; // the window title already names the release
+  const cells = (row) => row.trim().replace(/^\||\|$/g, "").split("|").map((c) => c.trim());
+  const LIST = /^(\s*)([-*]|\d+\.)\s+(.*)$/;
+  while (i < lines.length) {
+    const line = lines[i];
+    if (!line.trim()) { i++; continue; }
+    if (/^```/.test(line)) {
+      const buf = [];
+      for (i++; i < lines.length && !/^```/.test(lines[i]); i++) buf.push(lines[i]);
+      i++;
+      out.push(`<pre><code>${esc(buf.join("\n"))}</code></pre>`);
+      continue;
+    }
+    const h = line.match(/^(#{1,6})\s+(.*)$/);
+    if (h) { const lvl = Math.min(h[1].length + 1, 5); out.push(`<h${lvl}>${inline(h[2])}</h${lvl}>`); i++; continue; }
+    if (/^\s*\|/.test(line)) {
+      const rows = [];
+      for (; i < lines.length && /^\s*\|/.test(lines[i]); i++) rows.push(cells(lines[i]));
+      const head = rows[0];
+      const body = rows.slice(rows[1] && rows[1].every((c) => /^:?-{2,}:?$/.test(c)) ? 2 : 1);
+      const thead = head.some(Boolean) ? `<thead><tr>${head.map((c) => `<th>${inline(c)}</th>`).join("")}</tr></thead>` : "";
+      out.push(`<div class="notes__table"><table>${thead}<tbody>${body.map((r) => `<tr>${r.map((c) => `<td>${inline(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`);
+      continue;
+    }
+    const first = line.match(LIST);
+    if (first) {
+      const items = [];
+      while (i < lines.length) {
+        const m = lines[i].match(LIST);
+        if (m && m[1].length <= first[1].length) { items.push(m[3]); i++; continue; }
+        if (items.length && lines[i].trim() && /^\s+/.test(lines[i])) { items[items.length - 1] += " " + lines[i].trim(); i++; continue; }
+        break;
+      }
+      const tag = /\d/.test(first[2]) ? "ol" : "ul";
+      out.push(`<${tag}>${items.map((t) => `<li>${inline(t)}</li>`).join("")}</${tag}>`);
+      continue;
+    }
+    const para = [];
+    for (; i < lines.length && lines[i].trim() && !/^(#{1,6}\s|```|\s*\|)/.test(lines[i]) && !LIST.test(lines[i]); i++) para.push(lines[i].trim());
+    out.push(`<p>${inline(para.join(" "))}</p>`);
+  }
+  return out.join("\n");
+}
+
 const KEY_LABEL = { win: "Win", ctrl: "Ctrl", shift: "Shift", alt: "Alt", escape: "Esc", arrowleft: "←", arrowright: "→" };
 const KEY_NAME = { win: "Windows key", arrowleft: "Left arrow", arrowright: "Right arrow", ".": "Period", escape: "Escape" };
 
@@ -196,6 +255,7 @@ const graph = [
 
 const ctx = {
   ...data,
+  notesHtml: release.notes ? markdown(release.notes) : "",
   shortcuts, wallpapers, installSteps,
   year: new Date().getFullYear(),
   today,
@@ -206,6 +266,7 @@ const ctx = {
   dl: {
     href: downloadHref,
     hasIso: Boolean(download.isoUrl),
+    isoDirect: /\/file\//.test(download.isoUrl || ""),
     hasSha: Boolean(download.sha256Url),
     label: download.isoUrl ? `Download ${release.isoFile}` : "Download NeelaOS",
   },

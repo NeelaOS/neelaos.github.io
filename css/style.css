@@ -577,6 +577,7 @@ p kbd, li kbd { height: 22px; min-width: 0; padding: 0 6px; vertical-align: 1px;
 .tstep p { color: var(--ice-300); margin-top: 6px; font-size: .95rem; }
 .install__side { display: grid; gap: 18px; }
 @media (min-width: 1040px) { .install__side { position: sticky; top: calc(var(--nav-h) + 32px); } }
+.dl-host { margin-top: 10px; text-align: center; }
 .links-list { display: grid; margin-top: 18px; }
 .links-list > div { display: grid; grid-template-columns: 110px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: .9rem; }
 .links-list > div:last-child { border-bottom: 0; }
@@ -600,6 +601,31 @@ p kbd, li kbd { height: 22px; min-width: 0; padding: 0 6px; vertical-align: 1px;
 .tip { margin-top: 18px; }
 .tip summary { cursor: pointer; font-weight: 600; color: var(--teal-300); }
 .tip ul { margin-top: 12px; padding-left: 20px; color: var(--ice-200); display: grid; gap: 6px; font-size: .93rem; }
+
+/* ---------- 15b. Release notes (rendered from GitHub Markdown) --------- */
+.notes-win { max-width: 940px; margin-inline: auto; }
+.notes { position: relative; color: var(--ice-200); font-size: .96rem; }
+.js .notes.is-clamped { max-height: 520px; overflow: hidden; }
+.js .notes.is-clamped::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 140px; background: linear-gradient(transparent, var(--win)); pointer-events: none; }
+.notes > * + * { margin-top: 12px; }
+.notes h3 { font-size: 1.2rem; color: #fff; margin-top: 26px; }
+.notes h4, .notes h5 { font-size: 1.02rem; color: #fff; margin-top: 20px; }
+.notes > :first-child { margin-top: 0; }
+.notes > p:first-child em { color: var(--gold-300); }
+.notes ul, .notes ol { padding-left: 1.3em; display: grid; gap: 6px; }
+.notes li::marker { color: var(--teal-300); }
+.notes strong { color: #fff; }
+.notes a { color: var(--teal-300); text-decoration: underline; text-underline-offset: 2px; }
+.notes pre { padding: 12px 14px; border-radius: var(--r-sm); background: var(--navy-950); border: 1px solid var(--line); overflow-x: auto; }
+.notes pre code { font-size: .84rem; color: var(--ice-100); padding: 0; border: 0; background: none; }
+.notes__table { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--r-sm); }
+.notes table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+.notes th, .notes td { padding: 10px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.notes tr:last-child td { border-bottom: 0; }
+.notes th { color: var(--ice-400); font-weight: 600; }
+.notes td:first-child { white-space: nowrap; color: #fff; }
+.notes__foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; margin-top: 18px; }
+.no-js .notes__foot .btn { display: none; }
 
 /* ---------- 16. Updates + good to know ---------------------------------- */
 .duo { display: grid; gap: 24px; align-items: start; }

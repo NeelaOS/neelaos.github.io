@@ -121,7 +121,7 @@
     <a href="#wallpapers"><span class="tile"><svg aria-hidden="true"><use href="#i-image"/></svg></span>Wallpapers</a>
     <a href="#specs"><span class="tile"><svg aria-hidden="true"><use href="#i-chip"/></svg></span>Specs</a>
     <a href="#install"><span class="tile"><svg aria-hidden="true"><use href="#i-usb"/></svg></span>Install</a>
-    <a href="#updates"><span class="tile"><svg aria-hidden="true"><use href="#i-refresh"/></svg></span>Updates</a>
+    <a href="{{#if notesHtml}}#release{{else}}#updates{{/if}}"><span class="tile"><svg aria-hidden="true"><use href="#i-refresh"/></svg></span>{{#if notesHtml}}What&rsquo;s new{{else}}Updates{{/if}}</a>
     <a href="#about"><span class="tile"><svg aria-hidden="true"><use href="#i-user"/></svg></span>About</a>
     <a href="#faq"><span class="tile"><svg aria-hidden="true"><use href="#i-help"/></svg></span>FAQ</a>
   </div>
@@ -140,7 +140,7 @@
   <canvas class="hero__sparks" aria-hidden="true"></canvas>
   <div class="wrap">
     <svg class="mark" viewBox="196 188 362 377" role="img" aria-label="NeelaOS logo"><polygon points="204,203 307,203 468,357" style="--c:#FFFFFF;--i:0;--dx:-160px;--dy:-260px;--r:-60deg;--hx:-6px;--hy:-14px"/><polygon points="204,203 468,357 285,392" style="--c:#DCEFF5;--i:1;--dx:-240px;--dy:-120px;--r:40deg;--hx:-8px;--hy:-8px"/><polygon points="285,392 468,357 443,548" style="--c:#F2F9FC;--i:2;--dx:120px;--dy:240px;--r:-30deg;--hx:4px;--hy:10px"/><polygon points="468,357 550,548 443,548" style="--c:#BFDDE8;--i:3;--dx:260px;--dy:200px;--r:80deg;--hx:10px;--hy:10px"/><polygon points="285,392 360,466 360,507" style="--c:#A9CADB;--i:4;--dx:-200px;--dy:220px;--r:-90deg;--hx:-6px;--hy:10px"/><polygon points="285,392 360,507 284,557" style="--c:#D2E8F0;--i:5;--dx:-260px;--dy:160px;--r:50deg;--hx:-9px;--hy:12px"/><polygon points="392,284 392,236 468,195 468,357" style="--c:#9FC3D6;--i:6;--dx:160px;--dy:-260px;--r:70deg;--hx:6px;--hy:-12px"/><polygon points="468,195 550,272 468,357" style="--c:#EAF6FA;--i:7;--dx:280px;--dy:-180px;--r:-50deg;--hx:12px;--hy:-10px"/><polygon points="550,272 550,548 468,357" style="--c:#C7E2EC;--i:8;--dx:300px;--dy:40px;--r:100deg;--hx:14px;--hy:2px"/></svg>
-    <a class="release-pill hero-fade" style="--delay:.7s" href="{{release.notesUrl}}" target="_blank" rel="noopener"><b>NeelaOS v1.0.0</b>{{#if release.available}}Released{{else}}Coming soon{{/if}}<span class="release-pill__more"> &middot; Release notes</span> <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a class="release-pill hero-fade" style="--delay:.7s" href="{{release.notesUrl}}" target="_blank" rel="noopener"><b>NeelaOS v{{release.version}}</b>{{#if release.available}}Released{{else}}Coming soon{{/if}}<span class="release-pill__more"> &middot; Release notes</span> <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
     <h1 id="hero-title"><span class="h1-kicker hero-fade" style="--delay:.8s">NeelaOS, the free Linux desktop for Computer Science students</span><span class="w"><span style="--i:0">Feels</span></span> <span class="w"><span style="--i:1">like</span></span> <span class="w"><span style="--i:2">Windows.</span></span><br><span class="w"><span style="--i:3">Runs</span></span> <span class="w"><span style="--i:4">like</span></span> <span class="w"><span style="--i:5" class="teal">Linux.</span></span></h1>
     <p class="lead hero-fade" style="--delay:1.05s">A free, Windows-familiar Linux desktop for Computer Science students, with every coding tool ready from the very first boot. Built on {{release.base}} and {{release.desktop}}.</p>
     <div class="hero__cta hero-fade" style="--delay:1.2s">
@@ -415,6 +415,24 @@
   </div>
 </section>
 
+{{#if notesHtml}}<!-- ============================== RELEASE NOTES (synced from GitHub) ============================== -->
+<section class="section section--tight" id="release" aria-labelledby="release-title">
+  <div class="wrap">
+    <div class="head center" data-reveal><span class="eyebrow">What's new</span><h2 id="release-title">{{release.name}}{{#if release.date}} <span class="gold">&middot; released {{release.date}}</span>{{/if}}</h2><p>Straight from the official release notes on GitHub.</p></div>
+    <article class="win notes-win" data-reveal>
+      <div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Release notes &mdash; NeelaOS {{release.version}}</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
+      <div class="win__body">
+        <div class="notes" data-notes>{{{notesHtml}}}</div>
+        <div class="notes__foot">
+          <button class="btn btn--ghost btn--sm" type="button" data-notes-toggle aria-expanded="false">Read the full notes</button>
+          <a class="link-arrow" href="{{release.notesUrl}}" target="_blank" rel="noopener">View on GitHub <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+{{/if}}
+
 <!-- ============================== INSTALL ============================== -->
 <section class="section" id="install" aria-labelledby="install-title">
   <div class="wrap">
@@ -438,6 +456,7 @@
           <div class="win__bar"><img src="img/favicon.svg" width="16" height="16" alt=""><span class="win__title">Download NeelaOS {{release.version}}</span><span class="win__ctl" aria-hidden="true"><i></i><i></i><i></i></span></div>
           <div class="win__body">
             <a class="btn btn--primary btn--lg btn--block" href="{{dl.href}}"><span class="btn__spark" aria-hidden="true"></span>{{dl.label}}</a>
+            {{#if download.host}}<p class="muted small dl-host">The ISO ({{release.isoSize}}) and its <code>.sha256</code> are hosted on {{download.host}}. {{#if dl.isoDirect}}The button opens the ISO on {{download.host}} and your browser downloads it from there.{{else}}The button opens the folder; click <strong>Download</strong> there to save both.{{/if}}</p>{{/if}}
             <dl class="links-list">
               <div><dt>ISO image</dt><dd>{{#if dl.hasIso}}<a href="{{download.isoUrl}}">{{download.isoUrl}}</a>{{else}}<code>{{release.isoFile}}</code> &middot; {{release.isoSize}}, on the releases page{{/if}}</dd></div>
               <div><dt>Checksum</dt><dd>{{#if dl.hasSha}}<a href="{{download.sha256Url}}">{{download.sha256Url}}</a>{{else}}<code>{{release.isoFile}}.sha256</code>{{/if}}</dd></div>

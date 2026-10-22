@@ -20,17 +20,21 @@
     "architecture": "64-bit Intel / AMD (x86_64)",
     "isoFile": "NeelaOS-x86_64.iso",
     "isoSize": "3.9 GB",
-    "sha256": "",
+    "sha256": "d5674087d636865811cf6116dc8dec9bdd2eddb7dd6d6bc2c1aed63957bf7653",
     "notesUrl": "https://github.com/NeelaOS/NeelaOS/releases/tag/v1.1.0",
-    "comingSoonText": "The first public ISO is almost here. Watch github.com/NeelaOS to be notified the moment NeelaOS 1.0.0 is released."
+    "comingSoonText": "The first public ISO is almost here. Watch github.com/NeelaOS to be notified the moment NeelaOS 1.0.0 is released.",
+    "name": "NeelaOS v1.1.0",
+    "notes": "# Release Notes\n\n- fixed bugs\n- added 24 in total dev packs, ready to install by one single click\n- fixed speed issue and optimizations."
   },
   "download": {
-    "_note": "isoUrl / sha256Url: paste the direct file links when the release is published. Until then every Download button points to releasesLatestUrl.",
-    "isoUrl": "",
-    "sha256Url": "",
+    "_note": "megaFolder: the public MEGA folder with the ISO and .sha256. scripts/sync-mega.mjs fills isoUrl/sha256Url (direct file links), isoFile, isoSize and sha256 from it. If isoUrl is empty, Download buttons fall back to releasesLatestUrl.",
+    "isoUrl": "https://mega.nz/folder/JN9hSQBA#DwWMUE5Jib0LUHR7oeObQA/file/1U81HQKT",
+    "sha256Url": "https://mega.nz/folder/JN9hSQBA#DwWMUE5Jib0LUHR7oeObQA/file/hZsmGLrK",
     "releasesLatestUrl": "https://github.com/NeelaOS/NeelaOS/releases/latest",
     "releasesUrl": "https://github.com/NeelaOS/NeelaOS/releases",
-    "mirrors": []
+    "mirrors": [],
+    "host": "MEGA",
+    "megaFolder": "https://mega.nz/folder/JN9hSQBA#DwWMUE5Jib0LUHR7oeObQA"
   },
   "links": {
     "repo": "https://github.com/NeelaOS/NeelaOS",
