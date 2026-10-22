@@ -13,15 +13,15 @@
   },
   "release": {
     "available": true,
-    "version": "1.0.0",
-    "date": "2026-10-21",
+    "version": "1.1.0",
+    "date": "2026-10-22",
     "base": "Fedora 44",
     "desktop": "KDE Plasma 6",
     "architecture": "64-bit Intel / AMD (x86_64)",
     "isoFile": "NeelaOS-x86_64.iso",
     "isoSize": "3.9 GB",
     "sha256": "",
-    "notesUrl": "https://github.com/NeelaOS/NeelaOS/releases/tag/v1.0.0",
+    "notesUrl": "https://github.com/NeelaOS/NeelaOS/releases/tag/v1.1.0",
     "comingSoonText": "The first public ISO is almost here. Watch github.com/NeelaOS to be notified the moment NeelaOS 1.0.0 is released."
   },
   "download": {
