@@ -1,7 +1,7 @@
 {
   "name": "NeelaOS",
   "short_name": "NeelaOS",
-  "description": "NeelaOS is a free, Windows-familiar Linux desktop built on Fedora 44 and KDE Plasma 6, with every coding tool a Computer Science student needs ready from the very first boot. Download the ISO and install from a USB stick.",
+  "description": "Free Windows-like Linux for Computer Science students. Fedora 44 + KDE Plasma 6 with every coding tool ready from first boot. Download the ISO.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
