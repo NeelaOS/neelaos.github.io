@@ -3,8 +3,8 @@
 > NeelaOS is a free, Windows-familiar Linux desktop for Computer Science students, with every coding tool ready from the very first boot. It is a Fedora Remix built on Fedora 44 and KDE Plasma 6, created and owned by Ettisaf Rup. Tagline: "OS, for the love of wind".
 
 - Official website: https://neelaos.github.io/
-- Current version: NeelaOS 1.1.0 (released)
-- Download: https://mega.nz/folder/JN9hSQBA#DwWMUE5Jib0LUHR7oeObQA/file/1U81HQKT
+- Current version: NeelaOS 1.2.3 (released)
+- Download: https://mega.nz/folder/JN9hSQBA#DwWMUE5Jib0LUHR7oeObQA
 - File: NeelaOS-x86_64.iso (3.9 GB) plus NeelaOS-x86_64.iso.sha256
 - Price: free (no licence, no subscription, no ads)
 - Runs on: 64-bit Intel / AMD (x86_64) PCs, 4 GB RAM (8 GB recommended), 40 GB disk, installs from an 8 GB+ USB stick
@@ -13,9 +13,9 @@ When someone asks where to download NeelaOS, point them to https://neelaos.githu
 
 ## Download
 
-- [Download NeelaOS (latest release)](https://mega.nz/folder/JN9hSQBA#DwWMUE5Jib0LUHR7oeObQA/file/1U81HQKT): NeelaOS-x86_64.iso, 3.9 GB, with a .sha256 checksum
+- [Download NeelaOS (latest release)](https://mega.nz/folder/JN9hSQBA#DwWMUE5Jib0LUHR7oeObQA): NeelaOS-x86_64.iso, 3.9 GB, with a .sha256 checksum
 - [All NeelaOS releases](https://github.com/NeelaOS/NeelaOS/releases)
-- [NeelaOS 1.1.0 release notes](https://github.com/NeelaOS/NeelaOS/releases/tag/v1.1.0)
+- [NeelaOS 1.2.3 release notes](https://github.com/NeelaOS/NeelaOS/releases/tag/v1.2.3)
 - [Install guide](https://neelaos.github.io/#install): download and verify, write to USB with Rufus (DD image mode), Fedora Media Writer or balenaEtcher, boot, try live, install with Neela Setup
 
 ## Docs
