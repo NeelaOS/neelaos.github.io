@@ -1,7 +1,7 @@
 # NeelaOS: full description
 
 Website: https://neelaos.github.io/
-Download: https://mega.nz/folder/JN9hSQBA#DwWMUE5Jib0LUHR7oeObQA
+Download: https://mega.nz/folder/JN9hSQBA#DwWMUE5Jib0LUHR7oeObQA/file/MV9yHACQ
 Version: 1.2.3 (released)
 Creator and owner: Ettisaf Rup
 Last updated: 2026-10-23
@@ -66,7 +66,7 @@ Neela Dark and Neela Light themes, six original wallpapers (Crystal (default), M
 
 ## Download and install
 
-Download page: https://mega.nz/folder/JN9hSQBA#DwWMUE5Jib0LUHR7oeObQA
+Download page: https://mega.nz/folder/JN9hSQBA#DwWMUE5Jib0LUHR7oeObQA/file/MV9yHACQ
 All releases: https://github.com/NeelaOS/NeelaOS/releases
 Release notes: https://github.com/NeelaOS/NeelaOS/releases/tag/v1.2.3
 SHA-256 of NeelaOS-x86_64.iso: 76f710bad7f19b6da72fadec1e6e654eb2dfc11ccf5c3ea65fc53e062dd7e624

@@ -28,7 +28,7 @@
   },
   "download": {
     "_note": "megaFolder: the public MEGA folder with the ISO and .sha256. scripts/sync-mega.mjs fills isoUrl/sha256Url (direct file links), isoFile, isoSize and sha256 from it. If isoUrl is empty, Download buttons fall back to releasesLatestUrl.",
-    "isoUrl": "https://mega.nz/folder/JN9hSQBA#DwWMUE5Jib0LUHR7oeObQA",
+    "isoUrl": "https://mega.nz/folder/JN9hSQBA#DwWMUE5Jib0LUHR7oeObQA/file/MV9yHACQ",
     "sha256Url": "https://mega.nz/folder/JN9hSQBA#DwWMUE5Jib0LUHR7oeObQA/file/wQ0SzIZQ",
     "releasesLatestUrl": "https://github.com/NeelaOS/NeelaOS/releases/latest",
     "releasesUrl": "https://github.com/NeelaOS/NeelaOS/releases",
